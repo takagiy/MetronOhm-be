@@ -1,0 +1,852 @@
+{
+    "version": 1.0,
+    "term": 75158,
+    "notes": [
+        [
+            {
+                "expires": 13983,
+                "id": 11,
+                "speed": 1
+            },
+            {
+                "expires": 14946,
+                "id": 13,
+                "speed": 1
+            },
+            {
+                "expires": 15909,
+                "id": 15,
+                "speed": 1
+            },
+            {
+                "expires": 20240,
+                "id": 28,
+                "speed": 1
+            },
+            {
+                "expires": 20561,
+                "id": 29,
+                "speed": 1
+            },
+            {
+                "expires": 32433,
+                "id": 51,
+                "speed": 1
+            },
+            {
+                "expires": 32754,
+                "id": 52,
+                "speed": 1
+            },
+            {
+                "expires": 42981,
+                "id": 72,
+                "speed": 1
+            },
+            {
+                "expires": 53850,
+                "id": 97,
+                "speed": 1
+            },
+            {
+                "expires": 64077,
+                "id": 120,
+                "speed": 1
+            }
+        ],
+        [
+            {
+                "expires": 9491,
+                "id": 2,
+                "speed": 1
+            },
+            {
+                "expires": 10133,
+                "id": 4,
+                "speed": 1
+            },
+            {
+                "expires": 11417,
+                "id": 6,
+                "speed": 1
+            },
+            {
+                "expires": 12379,
+                "id": 8,
+                "speed": 1
+            },
+            {
+                "expires": 15267,
+                "id": 14,
+                "speed": 1
+            },
+            {
+                "expires": 16550,
+                "id": 16,
+                "speed": 1
+            },
+            {
+                "expires": 17192,
+                "id": 18,
+                "speed": 1
+            },
+            {
+                "expires": 17513,
+                "id": 20,
+                "speed": 1
+            },
+            {
+                "expires": 17834,
+                "id": 22,
+                "speed": 1
+            },
+            {
+                "expires": 18475,
+                "id": 23,
+                "speed": 1
+            },
+            {
+                "expires": 18796,
+                "id": 24,
+                "speed": 1
+            },
+            {
+                "expires": 19598,
+                "id": 26,
+                "speed": 1
+            },
+            {
+                "expires": 19919,
+                "id": 27,
+                "speed": 1
+            },
+            {
+                "expires": 23609,
+                "id": 33,
+                "speed": 1
+            },
+            {
+                "expires": 23930,
+                "id": 34,
+                "speed": 1
+            },
+            {
+                "expires": 25374,
+                "id": 38,
+                "speed": 1
+            },
+            {
+                "expires": 29866,
+                "id": 45,
+                "speed": 1
+            },
+            {
+                "expires": 30187,
+                "id": 46,
+                "speed": 1
+            },
+            {
+                "expires": 33074,
+                "id": 53,
+                "speed": 1
+            },
+            {
+                "expires": 33395,
+                "id": 54,
+                "speed": 1
+            },
+            {
+                "expires": 38850,
+                "id": 59,
+                "speed": 1
+            },
+            {
+                "expires": 40614,
+                "id": 63,
+                "speed": 1
+            },
+            {
+                "expires": 45868,
+                "id": 77,
+                "speed": 1
+            },
+            {
+                "expires": 46189,
+                "id": 78,
+                "speed": 1
+            },
+            {
+                "expires": 48596,
+                "id": 81,
+                "speed": 1
+            },
+            {
+                "expires": 49077,
+                "id": 82,
+                "speed": 1
+            },
+            {
+                "expires": 50802,
+                "id": 87,
+                "speed": 1
+            },
+            {
+                "expires": 53529,
+                "id": 96,
+                "speed": 1
+            },
+            {
+                "expires": 58823,
+                "id": 104,
+                "speed": 1
+            },
+            {
+                "expires": 59304,
+                "id": 107,
+                "speed": 1
+            },
+            {
+                "expires": 61871,
+                "id": 113,
+                "speed": 1
+            },
+            {
+                "expires": 66002,
+                "id": 124,
+                "speed": 1
+            },
+            {
+                "expires": 66323,
+                "id": 125,
+                "speed": 1
+            },
+            {
+                "expires": 66644,
+                "id": 128,
+                "speed": 1
+            },
+            {
+                "expires": 69050,
+                "id": 131,
+                "speed": 1
+            },
+            {
+                "expires": 69211,
+                "id": 132,
+                "speed": 1
+            },
+            {
+                "expires": 71898,
+                "id": 138,
+                "speed": 1
+            },
+            {
+                "expires": 72058,
+                "id": 141,
+                "speed": 1
+            }
+        ],
+        [
+            {
+                "expires": 8208,
+                "id": 0,
+                "speed": 1
+            },
+            {
+                "expires": 8850,
+                "id": 1,
+                "speed": 1
+            },
+            {
+                "expires": 9812,
+                "id": 3,
+                "speed": 1
+            },
+            {
+                "expires": 10775,
+                "id": 5,
+                "speed": 1
+            },
+            {
+                "expires": 13342,
+                "id": 10,
+                "speed": 1
+            },
+            {
+                "expires": 14625,
+                "id": 12,
+                "speed": 1
+            },
+            {
+                "expires": 17192,
+                "id": 17,
+                "speed": 1
+            },
+            {
+                "expires": 17513,
+                "id": 19,
+                "speed": 1
+            },
+            {
+                "expires": 17834,
+                "id": 21,
+                "speed": 1
+            },
+            {
+                "expires": 22967,
+                "id": 31,
+                "speed": 1
+            },
+            {
+                "expires": 23288,
+                "id": 32,
+                "speed": 1
+            },
+            {
+                "expires": 24732,
+                "id": 36,
+                "speed": 1
+            },
+            {
+                "expires": 25053,
+                "id": 37,
+                "speed": 1
+            },
+            {
+                "expires": 28101,
+                "id": 41,
+                "speed": 1
+            },
+            {
+                "expires": 31310,
+                "id": 48,
+                "speed": 1
+            },
+            {
+                "expires": 31631,
+                "id": 49,
+                "speed": 1
+            },
+            {
+                "expires": 33716,
+                "id": 55,
+                "speed": 1
+            },
+            {
+                "expires": 38850,
+                "id": 58,
+                "speed": 1
+            },
+            {
+                "expires": 40935,
+                "id": 64,
+                "speed": 1
+            },
+            {
+                "expires": 41256,
+                "id": 66,
+                "speed": 1
+            },
+            {
+                "expires": 41417,
+                "id": 67,
+                "speed": 1
+            },
+            {
+                "expires": 42660,
+                "id": 71,
+                "speed": 1
+            },
+            {
+                "expires": 43302,
+                "id": 73,
+                "speed": 1
+            },
+            {
+                "expires": 48275,
+                "id": 80,
+                "speed": 1
+            },
+            {
+                "expires": 49077,
+                "id": 83,
+                "speed": 1
+            },
+            {
+                "expires": 51122,
+                "id": 88,
+                "speed": 1
+            },
+            {
+                "expires": 51604,
+                "id": 90,
+                "speed": 1
+            },
+            {
+                "expires": 53208,
+                "id": 95,
+                "speed": 1
+            },
+            {
+                "expires": 56417,
+                "id": 101,
+                "speed": 1
+            },
+            {
+                "expires": 58502,
+                "id": 103,
+                "speed": 1
+            },
+            {
+                "expires": 59304,
+                "id": 106,
+                "speed": 1
+            },
+            {
+                "expires": 61871,
+                "id": 114,
+                "speed": 1
+            },
+            {
+                "expires": 66323,
+                "id": 126,
+                "speed": 1
+            },
+            {
+                "expires": 66644,
+                "id": 127,
+                "speed": 1
+            },
+            {
+                "expires": 69532,
+                "id": 133,
+                "speed": 1
+            },
+            {
+                "expires": 71898,
+                "id": 139,
+                "speed": 1
+            },
+            {
+                "expires": 72058,
+                "id": 140,
+                "speed": 1
+            }
+        ],
+        [
+            {
+                "expires": 12058,
+                "id": 7,
+                "speed": 1
+            },
+            {
+                "expires": 12700,
+                "id": 9,
+                "speed": 1
+            },
+            {
+                "expires": 25695,
+                "id": 39,
+                "speed": 1
+            },
+            {
+                "expires": 28743,
+                "id": 42,
+                "speed": 1
+            },
+            {
+                "expires": 29064,
+                "id": 43,
+                "speed": 1
+            },
+            {
+                "expires": 41256,
+                "id": 65,
+                "speed": 1
+            },
+            {
+                "expires": 41417,
+                "id": 68,
+                "speed": 1
+            },
+            {
+                "expires": 43622,
+                "id": 74,
+                "speed": 1
+            },
+            {
+                "expires": 45387,
+                "id": 76,
+                "speed": 1
+            },
+            {
+                "expires": 51403,
+                "id": 89,
+                "speed": 1
+            },
+            {
+                "expires": 51604,
+                "id": 91,
+                "speed": 1
+            },
+            {
+                "expires": 52887,
+                "id": 94,
+                "speed": 1
+            },
+            {
+                "expires": 56096,
+                "id": 100,
+                "speed": 1
+            },
+            {
+                "expires": 59144,
+                "id": 105,
+                "speed": 1
+            },
+            {
+                "expires": 65842,
+                "id": 123,
+                "speed": 1
+            }
+        ]
+    ],
+    "slideNotes": [
+        {
+            "startExpires": 19117,
+            "endExpires": 19438,
+            "startLane": 2,
+            "endLane": 2,
+            "id": 25,
+            "speed": 1
+        },
+        {
+            "startExpires": 20882,
+            "endExpires": 22326,
+            "startLane": 1,
+            "endLane": 1,
+            "id": 30,
+            "speed": 1
+        },
+        {
+            "startExpires": 24251,
+            "endExpires": 24572,
+            "startLane": 0,
+            "endLane": 0,
+            "id": 35,
+            "speed": 1
+        },
+        {
+            "startExpires": 26016,
+            "endExpires": 27459,
+            "startLane": 1,
+            "endLane": 1,
+            "id": 40,
+            "speed": 1
+        },
+        {
+            "startExpires": 29385,
+            "endExpires": 29705,
+            "startLane": 2,
+            "endLane": 2,
+            "id": 44,
+            "speed": 1
+        },
+        {
+            "startExpires": 30508,
+            "endExpires": 30828,
+            "startLane": 0,
+            "endLane": 0,
+            "id": 47,
+            "speed": 1
+        },
+        {
+            "startExpires": 31951,
+            "endExpires": 32272,
+            "startLane": 2,
+            "endLane": 2,
+            "id": 50,
+            "speed": 1
+        },
+        {
+            "startExpires": 33877,
+            "endExpires": 36443,
+            "startLane": 2,
+            "endLane": 2,
+            "id": 56,
+            "speed": 1
+        },
+        {
+            "startExpires": 36443,
+            "endExpires": 38368,
+            "startLane": 1,
+            "endLane": 1,
+            "id": 57,
+            "speed": 1
+        },
+        {
+            "startExpires": 39171,
+            "endExpires": 39652,
+            "startLane": 1,
+            "endLane": 1,
+            "id": 60,
+            "speed": 1
+        },
+        {
+            "startExpires": 39171,
+            "endExpires": 39652,
+            "startLane": 2,
+            "endLane": 2,
+            "id": 61,
+            "speed": 1
+        },
+        {
+            "startExpires": 40133,
+            "endExpires": 40294,
+            "startLane": 0,
+            "endLane": 0,
+            "id": 62,
+            "speed": 1
+        },
+        {
+            "startExpires": 41737,
+            "endExpires": 42219,
+            "startLane": 2,
+            "endLane": 2,
+            "id": 69,
+            "speed": 1
+        },
+        {
+            "startExpires": 41737,
+            "endExpires": 42219,
+            "startLane": 3,
+            "endLane": 3,
+            "id": 70,
+            "speed": 1
+        },
+        {
+            "startExpires": 43943,
+            "endExpires": 44906,
+            "startLane": 2,
+            "endLane": 2,
+            "id": 75,
+            "speed": 1
+        },
+        {
+            "startExpires": 46510,
+            "endExpires": 47633,
+            "startLane": 3,
+            "endLane": 3,
+            "id": 79,
+            "speed": 1
+        },
+        {
+            "startExpires": 49358,
+            "endExpires": 49839,
+            "startLane": 1,
+            "endLane": 1,
+            "id": 84,
+            "speed": 1
+        },
+        {
+            "startExpires": 49358,
+            "endExpires": 49839,
+            "startLane": 2,
+            "endLane": 2,
+            "id": 85,
+            "speed": 1
+        },
+        {
+            "startExpires": 50481,
+            "endExpires": 50641,
+            "startLane": 0,
+            "endLane": 0,
+            "id": 86,
+            "speed": 1
+        },
+        {
+            "startExpires": 51925,
+            "endExpires": 52406,
+            "startLane": 2,
+            "endLane": 2,
+            "id": 92,
+            "speed": 1
+        },
+        {
+            "startExpires": 51925,
+            "endExpires": 52406,
+            "startLane": 3,
+            "endLane": 3,
+            "id": 93,
+            "speed": 1
+        },
+        {
+            "startExpires": 54171,
+            "endExpires": 54812,
+            "startLane": 1,
+            "endLane": 1,
+            "id": 98,
+            "speed": 1
+        },
+        {
+            "startExpires": 55614,
+            "endExpires": 55935,
+            "startLane": 2,
+            "endLane": 2,
+            "id": 99,
+            "speed": 1
+        },
+        {
+            "startExpires": 56737,
+            "endExpires": 57860,
+            "startLane": 1,
+            "endLane": 1,
+            "id": 102,
+            "speed": 1
+        },
+        {
+            "startExpires": 59625,
+            "endExpires": 60106,
+            "startLane": 1,
+            "endLane": 1,
+            "id": 108,
+            "speed": 1
+        },
+        {
+            "startExpires": 59625,
+            "endExpires": 60106,
+            "startLane": 2,
+            "endLane": 2,
+            "id": 109,
+            "speed": 1
+        },
+        {
+            "startExpires": 60588,
+            "endExpires": 60909,
+            "startLane": 0,
+            "endLane": 0,
+            "id": 110,
+            "speed": 1
+        },
+        {
+            "startExpires": 61069,
+            "endExpires": 61390,
+            "startLane": 1,
+            "endLane": 1,
+            "id": 111,
+            "speed": 1
+        },
+        {
+            "startExpires": 61390,
+            "endExpires": 61711,
+            "startLane": 0,
+            "endLane": 1,
+            "id": 112,
+            "speed": 1
+        },
+        {
+            "startExpires": 62192,
+            "endExpires": 62673,
+            "startLane": 1,
+            "endLane": 1,
+            "id": 115,
+            "speed": 1
+        },
+        {
+            "startExpires": 62192,
+            "endExpires": 62673,
+            "startLane": 2,
+            "endLane": 2,
+            "id": 116,
+            "speed": 1
+        },
+        {
+            "startExpires": 63155,
+            "endExpires": 63435,
+            "startLane": 3,
+            "endLane": 3,
+            "id": 117,
+            "speed": 1
+        },
+        {
+            "startExpires": 63435,
+            "endExpires": 63756,
+            "startLane": 2,
+            "endLane": 2,
+            "id": 118,
+            "speed": 1
+        },
+        {
+            "startExpires": 63756,
+            "endExpires": 64077,
+            "startLane": 1,
+            "endLane": 1,
+            "id": 119,
+            "speed": 1
+        },
+        {
+            "startExpires": 64398,
+            "endExpires": 65521,
+            "startLane": 1,
+            "endLane": 1,
+            "id": 121,
+            "speed": 1
+        },
+        {
+            "startExpires": 64398,
+            "endExpires": 65521,
+            "startLane": 2,
+            "endLane": 2,
+            "id": 122,
+            "speed": 1
+        },
+        {
+            "startExpires": 66965,
+            "endExpires": 68088,
+            "startLane": 3,
+            "endLane": 3,
+            "id": 129,
+            "speed": 1
+        },
+        {
+            "startExpires": 68409,
+            "endExpires": 68729,
+            "startLane": 2,
+            "endLane": 2,
+            "id": 130,
+            "speed": 1
+        },
+        {
+            "startExpires": 69692,
+            "endExpires": 70173,
+            "startLane": 0,
+            "endLane": 0,
+            "id": 134,
+            "speed": 1
+        },
+        {
+            "startExpires": 70173,
+            "endExpires": 70614,
+            "startLane": 1,
+            "endLane": 1,
+            "id": 135,
+            "speed": 1
+        },
+        {
+            "startExpires": 70614,
+            "endExpires": 71096,
+            "startLane": 2,
+            "endLane": 2,
+            "id": 136,
+            "speed": 1
+        },
+        {
+            "startExpires": 71096,
+            "endExpires": 71617,
+            "startLane": 3,
+            "endLane": 3,
+            "id": 137,
+            "speed": 1
+        }
+    ]
+}

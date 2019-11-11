@@ -1,0 +1,11 @@
+{
+  "version": 1.0,
+  "term": 10000,
+  "notes": [[],[],[],[]],
+  "slideNotes": [
+    { "startExpires": 1000, "endExpires": 2000, "startLane": 0, "endLane": 0, "id": 0},
+    { "startExpires": 1000, "endExpires": 2000, "startLane": 1, "endLane": 1, "id": 1},
+    { "startExpires": 3000, "endExpires": 4000, "startLane": 2, "endLane": 2, "id": 2},
+    { "startExpires": 3000, "endExpires": 4000, "startLane": 3, "endLane": 3, "id": 3}
+  ]
+}
