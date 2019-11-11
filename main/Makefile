@@ -10,9 +10,21 @@ DISTASSET := $(ASSET:%=$(DISTDIR)/%)
 
 DIST := $(DISTSRC) $(DISTASSET)
 
-.PHONY: all clean
+BINDIR := $(DISTDIR)/bin
 
-all: $(DIST)
+BINWIN := $(BINDIR)/windows/MetronOhm.exe
+
+BINMAC := $(BINDIR)/mac/MetronOhm
+
+BINLINUX := $(BINDIR)/linux/MetronOhm
+
+ENTRY := $(DISTDIR)/src/otoge/index.js
+
+.PHONY: all bin js clean
+
+js: $(DIST)
+
+all: js bin
 
 $(DIST): $(DISTDIR)/intermediate $(SRC)
 
@@ -25,3 +37,14 @@ node_modules:
 
 clean:
 	rm -rf $(DISTDIR)
+
+bin: $(BINWIN) $(BINMAC) $(BINLINUX)
+
+$(BINWIN): $(ENTRY)
+	npx nexe $< --output $@ --target 'windows-x86-12.12.0'
+
+$(BINMAC): $(ENTRY)
+	npx nexe $< --output $@ --target 'mac-x64-12.12.0'
+
+$(BINLINUX): $(ENTRY)
+	npx nexe $< --output $@ --target 'linux-x86-12.12.0'
