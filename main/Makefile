@@ -1,19 +1,27 @@
-.PHONY: all run
+SRCDIR := ./src
+ASSETDIR := ./assets
+DISTDIR := ./dist
 
-all: dist
+SRC := $(shell find $(SRCDIR) -type f -name "*.ts")
+ASSET := $(shell find $(ASSETDIR) -type f -name "*.json")
 
-dist: node_modules src
+DISTSRC := $(SRC:%.ts=$(DISTDIR)/%.js)
+DISTASSET := $(ASSET:%=$(DISTDIR)/%)
+
+DIST := $(DISTSRC) $(DISTASSET)
+
+.PHONY: all clean
+
+all: $(DIST)
+
+$(DIST): $(DISTDIR)/intermediate $(SRC)
+
+$(DISTDIR)/intermediate: $(SRC) $(ASSET) node_modules
 	npm run build
-
-run: dist
-	npm start
+	touch $(DISTDIR)/intermediate
 
 node_modules:
 	npm install
 
 clean:
-	rm -rf dist
-
-CLEAN:
-	rm -rf dist
-	rm -rf node_modules
+	rm -rf $(DISTDIR)
