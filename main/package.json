@@ -1,5 +1,5 @@
 {
-  "name": "nitacfest",
+  "name": "metronohm-be",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -10,7 +10,7 @@
   },
   "keywords": [],
   "author": "",
-  "license": "ISC",
+  "license": "MIT",
   "devDependencies": {
     "@types/app-root-path": "^1.2.4",
     "@types/express": "^4.17.1",
