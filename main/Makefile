@@ -1,19 +1,50 @@
-.PHONY: all run
+SRCDIR := ./src
+ASSETDIR := ./assets
+DISTDIR := ./dist
 
-all: dist
+SRC := $(shell find $(SRCDIR) -type f -name "*.ts")
+ASSET := $(shell find $(ASSETDIR) -type f -name "*.json")
 
-dist: node_modules src
+DISTSRC := $(SRC:%.ts=$(DISTDIR)/%.js)
+DISTASSET := $(ASSET:%=$(DISTDIR)/%)
+
+DIST := $(DISTSRC) $(DISTASSET)
+
+BINDIR := $(DISTDIR)/bin
+
+BINWIN := $(BINDIR)/windows/MetronOhm.exe
+
+BINMAC := $(BINDIR)/mac/MetronOhm
+
+BINLINUX := $(BINDIR)/linux/MetronOhm
+
+ENTRY := $(DISTDIR)/src/otoge/index.js
+
+.PHONY: all bin js clean
+
+js: $(DIST)
+
+all: js bin
+
+$(DIST): $(DISTDIR)/intermediate $(SRC)
+
+$(DISTDIR)/intermediate: $(SRC) $(ASSET) node_modules
 	npm run build
-
-run: dist
-	npm start
+	touch $(DISTDIR)/intermediate
 
 node_modules:
 	npm install
 
 clean:
-	rm -rf dist
+	rm -rf $(DISTDIR)
 
-CLEAN:
-	rm -rf dist
-	rm -rf node_modules
+bin: $(BINWIN) $(BINMAC) $(BINLINUX)
+
+$(BINWIN): $(ENTRY)
+	npx nexe $< --output $@ --target 'windows-x86-12.12.0'
+
+$(BINMAC): $(ENTRY)
+	npx nexe $< --output $@ --target 'mac-x64-12.12.0'
+
+$(BINLINUX): $(ENTRY)
+	npx nexe $< --output $@ --target 'linux-x86-12.12.0'
