@@ -43,10 +43,10 @@ bin: $(BINWIN) $(BINMAC) $(BINLINUX)
 $(ENTRY): $(DIST)
 
 $(BINWIN): $(ENTRY)
-	npx nexe $< --output $@ --target 'windows-x86-12.12.0'
+	npx nexe $< --output $@ --target 'windows-x86-12.12.0' --resource ./assets
 
 $(BINMAC): $(ENTRY)
-	npx nexe $< --output $@ --target 'mac-x64-12.12.0'
+	npx nexe $< --output $@ --target 'mac-x64-12.12.0' --resource ./assets
 
 $(BINLINUX): $(ENTRY)
-	npx nexe $< --output $@ --target 'linux-x86-12.12.0'
+	npx nexe $< --output $@ --target 'linux-x86-12.12.0' --resource ./assets

@@ -1,6 +1,5 @@
 import { readdirSync, readFileSync } from 'fs';
 import * as Path from 'path';
-import ROOT from 'app-root-path';
 
 import { Score } from './score';
 import { LaneWatcher } from './lane-watcher';
@@ -70,7 +69,8 @@ export class MusicStore {
         let [name, difficulty] = d.name.split('.');
 
         this.musics[suffix][difficulty as Difficulty][name] = {
-      wavFile: `${ROOT}/../thanks/${name}.wav`,
+          wavFile: Path.resolve(`./private-assets/wav/${name}.wav`),
+          //wavFile: `${ROOT}/../thanks/${name}.wav`,
 	  score: score,
 	  scoreLimit: maxNormalScore + maxSlideScore,
 	  watchers: {
