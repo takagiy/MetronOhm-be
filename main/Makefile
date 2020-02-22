@@ -41,10 +41,10 @@ node_modules:
 	npm install
 
 $(BINWIN): $(ENTRY) js
-	npx nexe $< --output $@ --target 'windows-x86-12.12.0' --resource ./assets
+	npx nexe $< --output $@ --target 'windows-x86-12.12.0' --resource $(DISTASSETDIR)
 
 $(BINMAC): $(ENTRY) js
-	npx nexe $< --output $@ --target 'mac-x64-12.12.0' --resource ./assets
+	npx nexe $< --output $@ --target 'mac-x64-12.12.0' --resource $(DISTASSETDIR)
 
 $(BINLINUX): $(ENTRY) js
-	npx nexe $< --output $@ --target 'linux-x86-12.12.0' --resource ./assets
+	npx nexe $< --output $@ --target 'linux-x86-12.12.0' --resource $(DISTASSETDIR)
