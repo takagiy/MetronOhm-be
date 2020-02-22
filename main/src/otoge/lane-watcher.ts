@@ -1,6 +1,5 @@
+import * as Path from "path";
 import { readFileSync } from "fs";
-import root from "app-root-path";
-
 import { JudgeInfo } from "./judge-info";
 import { Judge } from "./judge";
 import { Note } from "./note";
@@ -30,7 +29,7 @@ export class LaneWatcher {
     this.missing = null;
     this.head = 0;
     this.sensitivity = JSON.parse(
-      readFileSync(root + "/assets/sensitivity.json", "utf8")
+      readFileSync(Path.resolve("./assets/sensitivity.json"), "utf8")
     );
   }
 

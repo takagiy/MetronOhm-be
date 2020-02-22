@@ -1,6 +1,5 @@
 import Ws from "ws";
-import root from "app-root-path";
-import path from "path";
+import Path from "path";
 import { exec } from "child_process";
 import { argv } from "process";
 
@@ -8,7 +7,7 @@ import { Watcher } from "./watcher";
 
 let music = argv[2];
 
-let wavFile = `${root}/../thanks/${music}.wav`;
+let wavFile = Path.resolve(`./private-assets/wav/${music}.wav`);
 
 let result = new Watcher("/result", cmd => {});
 

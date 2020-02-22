@@ -1,12 +1,12 @@
 import Ws from "ws";
-import root from "app-root-path";
+import Path from "path";
 
 import { Watcher } from "./watcher";
 import { MusicStore } from "../otoge/music-store";
 
 let m = "Bad_Apple";
 
-let store = new MusicStore(`${root}/assets/songs`);
+let store = new MusicStore(Path.resolve("./assets/songs"));
 
 let startTime: number;
 
