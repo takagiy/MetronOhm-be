@@ -1,1 +1,1 @@
-export type Rank = 'SSS' | 'SS' | 'S' | 'A' | 'B';
+export type Rank = "SSS" | "SS" | "S" | "A" | "B";

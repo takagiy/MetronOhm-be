@@ -1,5 +1,4 @@
-import { Judge } from './judge';
-
+import { Judge } from "./judge";
 
 export interface JudgeInfo {
   judge: Judge;

@@ -1,8 +1,8 @@
-import { SlideCheckpoint } from './slide-checkpoint';
-import { SlideJudgeInfo } from './slide-judge-info';
-import { Judge } from './judge';
+import { SlideCheckpoint } from "./slide-checkpoint";
+import { SlideJudgeInfo } from "./slide-judge-info";
+import { Judge } from "./judge";
 
-import slide from '../../assets/slide.json';
+import slide from "../../assets/slide.json";
 
 export class SlideWatcher {
   checkpoints: SlideCheckpoint[];
@@ -21,12 +21,17 @@ export class SlideWatcher {
   }
 
   judge(relNow: number, lane: number): SlideJudgeInfo | null {
-    if(this.checkpoints[this.head] == null || relNow < this.checkpoints[this.head].expires) {
+    if (
+      this.checkpoints[this.head] == null ||
+      relNow < this.checkpoints[this.head].expires
+    ) {
       return null;
     }
     let judge =
-      this.checkpoints[this.head].lane <= lane && lane <= this.checkpoints[this.head].lane + this.sensitivity
-        ? 'perfect' : 'bad' as Judge;
+      this.checkpoints[this.head].lane <= lane &&
+      lane <= this.checkpoints[this.head].lane + this.sensitivity
+        ? "perfect"
+        : ("bad" as Judge);
     let result = {
       lane: this.checkpoints[this.head].lane - 1.5,
       judge: judge,

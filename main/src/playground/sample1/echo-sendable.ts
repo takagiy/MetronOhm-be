@@ -1,4 +1,3 @@
-type EchoSendable =
-  { command: 'echoBack', data: string }
+type EchoSendable = { command: "echoBack"; data: string };
 
 export default EchoSendable;

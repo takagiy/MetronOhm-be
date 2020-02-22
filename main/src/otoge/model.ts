@@ -1,7 +1,7 @@
-import { Play } from './play';
-import { MusicStore } from './music-store';
+import { Play } from "./play";
+import { MusicStore } from "./music-store";
 
-export type OtogeState = 'title/result' | 'selectMusic' | 'playing';
+export type OtogeState = "title/result" | "selectMusic" | "playing";
 
 export class OtogeModel {
   nowPlaying: Play | null;
@@ -11,7 +11,7 @@ export class OtogeModel {
   constructor(storePath: string) {
     this.musicStore = new MusicStore(storePath);
     this.nowPlaying = null;
-    this.state = 'title/result';
+    this.state = "title/result";
   }
 
   setState(state: OtogeState) {

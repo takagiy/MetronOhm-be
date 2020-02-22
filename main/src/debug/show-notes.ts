@@ -1,11 +1,10 @@
-import Ws from 'ws';
-import root from 'app-root-path';
+import Ws from "ws";
+import root from "app-root-path";
 
-import { Watcher } from './watcher';
-import { MusicStore } from '../otoge/music-store';
+import { Watcher } from "./watcher";
+import { MusicStore } from "../otoge/music-store";
 
-
-let m = 'Bad_Apple';
+let m = "Bad_Apple";
 
 let store = new MusicStore(`${root}/assets/songs`);
 
@@ -15,10 +14,10 @@ let shown = [false, false, false, false];
 let preshown0 = [false, false, false, false];
 let preshown1 = [false, false, false, false];
 
-let input = new Watcher('/input', cmd => {});
+let input = new Watcher("/input", cmd => {});
 
-let notes = new Watcher('/notes', cmd => {
-  if(cmd.command == 'new') {
+let notes = new Watcher("/notes", cmd => {
+  if (cmd.command == "new") {
     setTimeout(() => {
       shown[cmd.lane] = true;
     }, startTime + cmd.time - Date.now());
@@ -31,20 +30,32 @@ let notes = new Watcher('/notes', cmd => {
   }
 });
 
-let selectMusic = new Watcher('/select-music', cmd => {
-  if(cmd.command == 'start') {
+let selectMusic = new Watcher("/select-music", cmd => {
+  if (cmd.command == "start") {
     startTime = cmd.time;
   }
 });
 
-let foot = new Watcher('/foot', cmd => {});
+let foot = new Watcher("/foot", cmd => {});
 
-let result = new Watcher('/result', cmd => {});
+let result = new Watcher("/result", cmd => {});
 
 function loop() {
-  let note = shown.reduce((acc, val) => acc + '|' + (val ? '============': '            '), '')+'|';
-  let prenote0 = preshown0.reduce((acc, val) => acc + ' ' + (val ? '------------': '            '), '')+' ';
-  let prenote1 = preshown1.reduce((acc, val) => acc + ' ' + (val ? '------------': '            '), '')+' ';
+  let note =
+    shown.reduce(
+      (acc, val) => acc + "|" + (val ? "============" : "            "),
+      ""
+    ) + "|";
+  let prenote0 =
+    preshown0.reduce(
+      (acc, val) => acc + " " + (val ? "------------" : "            "),
+      ""
+    ) + " ";
+  let prenote1 =
+    preshown1.reduce(
+      (acc, val) => acc + " " + (val ? "------------" : "            "),
+      ""
+    ) + " ";
   console.log(`\u001b[10;0H${prenote1}`);
   console.log(`${prenote0}`);
   console.log(`${note}`);

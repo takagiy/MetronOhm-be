@@ -1,10 +1,9 @@
-import express from 'express';
-import expressWs from 'express-ws';
-import * as util from 'util';
+import express from "express";
+import expressWs from "express-ws";
+import * as util from "util";
 
-import { ReceivableMap, ReceivableCommands } from './receivable';
-import { SendableMap, CommandEmitter } from './sendable';
-
+import { ReceivableMap, ReceivableCommands } from "./receivable";
+import { SendableMap, CommandEmitter } from "./sendable";
 
 export class System<Model, Sendable extends SendableMap> {
   private server: expressWs.Application;
@@ -26,27 +25,28 @@ export class System<Model, Sendable extends SendableMap> {
   }
 
   receive(receivable: ReceivableMap) {
-    Object.keys(receivable).forEach((route) => {
+    Object.keys(receivable).forEach(route => {
       this.receiveOn(route, receivable[route]);
-    })
+    });
   }
 
   private receiveOn(route: string, receivable: ReceivableCommands) {
-    this.server.ws(route, (ws) => {
+    this.server.ws(route, ws => {
       console.log(`${route}\t<new connection>`);
 
       this.commandEmitter.registerWs(route, ws);
 
-      ws.on('close', () => {
-	console.log(`${route}\t<close connection>`);
-	this.commandEmitter.removeWs(route, ws)
+      ws.on("close", () => {
+        console.log(`${route}\t<close connection>`);
+        this.commandEmitter.removeWs(route, ws);
       });
 
-      ws.on('message', (data: string) => {
-	console.log(`${route}\t-> ${util.inspect(data)}`);
-	let cmd = JSON.parse(data);
-        receivable[cmd.command] && receivable[cmd.command](cmd, this.model, this.commandEmitter);
+      ws.on("message", (data: string) => {
+        console.log(`${route}\t-> ${util.inspect(data)}`);
+        let cmd = JSON.parse(data);
+        receivable[cmd.command] &&
+          receivable[cmd.command](cmd, this.model, this.commandEmitter);
       });
-    })
+    });
   }
 }

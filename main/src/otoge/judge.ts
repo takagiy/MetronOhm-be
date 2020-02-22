@@ -1,1 +1,1 @@
-export type Judge = 'perfect' | 'great' | 'good' | 'bad' | 'miss';
+export type Judge = "perfect" | "great" | "good" | "bad" | "miss";

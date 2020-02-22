@@ -1,6 +1,5 @@
-import { Note } from './note';
-import { SlideNote } from './slide-note';
-
+import { Note } from "./note";
+import { SlideNote } from "./slide-note";
 
 export interface Score {
   version: number;
