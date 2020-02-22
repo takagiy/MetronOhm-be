@@ -20,7 +20,7 @@ BINWIN := $(BINDIR)/windows/MetronOhm.exe
 BINMAC := $(BINDIR)/mac/MetronOhm
 BINLINUX := $(BINDIR)/linux/MetronOhm
 
-.PHONY: all js bin clean
+.PHONY: all js bin clean run
 
 all: js bin
 
@@ -52,11 +52,26 @@ $(BINLINUX): $(ENTRY) $(DISTSRC) $(DISTASSET)
 SYSNAME := $(shell uname -s || echo "unknown")
 
 ifeq ($(SYSNAME), Linux)
-	PLATFORM := linux
-  BINMAIN := $(BINLINUX)
+PLATFORM := linux
+BINMAIN := $(BINLINUX)
 else ifeq ($(SYSNAME), Darwin)
-	PLATFORM := mac
-  BINMAIN := $(BINMAC)
+PLATFORM := mac
+BINMAIN := $(BINMAC)
 else
-	PLATFORM := unknown
+PLATFORM := unknown
+BINMAIN := $(BINWIN) $(BINMAC) $(BINLINUX)
+endif
+
+ifeq ($(PLATFORM), unknown)
+$(warning Detect the platform, unknown.)
+else
+$(info Detect the platform, $(PLATFORM).)
+endif
+
+run: $(BINMAIN)
+ifeq ($(PLATFORM), unknown)
+	@echo Cannot detect the platform.
+	@echo Run the binary in \"$(BINDIR)\" manually.
+else
+	$(BINMAIN)
 endif
