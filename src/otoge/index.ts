@@ -14,7 +14,7 @@ const title = String.raw`
 console.log(title);
 
 const system = new System<OtogeModel, OtogeSendable>(
-  new OtogeModel(Path.resolve("./assets/songs"))
+  new OtogeModel(Path.resolve("./dist/assets/songs"))
 );
 
 system.receive(otogeReceivable);

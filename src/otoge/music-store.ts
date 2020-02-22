@@ -1,4 +1,4 @@
-import { readdirSync, readFileSync } from "fs";
+import { readdirSync, readFileSync, statSync } from "fs";
 import * as Path from "path";
 
 import { Score } from "./score";
@@ -43,9 +43,10 @@ export class MusicStore {
 
   private storeScores(base: string, suffix: "plain" | "foot") {
     let path = Path.join(base, suffix == "foot" ? "old" : "");
-    let dir = readdirSync(path, { withFileTypes: true });
+    let dir = readdirSync(path);
 
-    dir.forEach(d => {
+    dir.forEach((d: any) => {
+      d = Object.assign(statSync(Path.join(path, d)), { name: d });
       if (d.isFile() && Path.extname(d.name).toUpperCase() == ".JSON") {
         let data = readFileSync(Path.join(path, d.name), "utf-8");
         let score: Score = JSON.parse(data);

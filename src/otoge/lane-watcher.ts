@@ -29,7 +29,7 @@ export class LaneWatcher {
     this.missing = null;
     this.head = 0;
     this.sensitivity = JSON.parse(
-      readFileSync(Path.resolve("./assets/sensitivity.json"), "utf8")
+      readFileSync(Path.resolve("./dist/assets/sensitivity.json"), "utf8")
     );
   }
 
