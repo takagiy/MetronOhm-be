@@ -40,6 +40,8 @@ clean:
 
 bin: $(BINWIN) $(BINMAC) $(BINLINUX)
 
+$(ENTRY): $(DIST)
+
 $(BINWIN): $(ENTRY)
 	npx nexe $< --output $@ --target 'windows-x86-12.12.0'
 
