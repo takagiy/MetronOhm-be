@@ -3,7 +3,7 @@ MetronOhm-be is the backend part of the otoge *MetronOhm* that is exhibit at the
 
 ## Requirements
 To build
-* `node >= v10.10`
+* `node` ≧ v10.10
 * `npm`
 * `make` (optionally)
 
