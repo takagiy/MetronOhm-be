@@ -40,11 +40,23 @@ $(DISTASSET) : $(ASSET)
 node_modules:
 	npm install
 
-$(BINWIN): $(ENTRY) js
+$(BINWIN): $(ENTRY) $(DISTSRC) $(DISTASSET)
 	npx nexe $< --output $@ --target 'windows-x86-12.12.0' --resource $(DISTASSETDIR)
 
-$(BINMAC): $(ENTRY) js
+$(BINMAC): $(ENTRY) $(DISTSRC) $(DISTASSET)
 	npx nexe $< --output $@ --target 'mac-x64-12.12.0' --resource $(DISTASSETDIR)
 
-$(BINLINUX): $(ENTRY) js
+$(BINLINUX): $(ENTRY) $(DISTSRC) $(DISTASSET)
 	npx nexe $< --output $@ --target 'linux-x86-12.12.0' --resource $(DISTASSETDIR)
+
+SYSNAME := $(shell uname -s || echo "unknown")
+
+ifeq ($(SYSNAME), Linux)
+	PLATFORM := linux
+  BINMAIN := $(BINLINUX)
+else ifeq ($(SYSNAME), Darwin)
+	PLATFORM := mac
+  BINMAIN := $(BINMAC)
+else
+	PLATFORM := unknown
+endif
