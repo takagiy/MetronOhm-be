@@ -1,52 +1,50 @@
+## directories
 SRCDIR := ./src
 ASSETDIR := ./assets
 DISTDIR := ./dist
+DISTSRCDIR := $(DISTDIR)/$(SRCDIR)
+DISTASSETDIR := $(DISTDIR)/$(ASSETDIR)
 
+## sources
 SRC := $(shell find $(SRCDIR) -type f -name "*.ts")
 ASSET := $(shell find $(ASSETDIR) -type f -name "*.json")
 
+## distributions
 DISTSRC := $(SRC:%.ts=$(DISTDIR)/%.js)
 DISTASSET := $(ASSET:%=$(DISTDIR)/%)
+ENTRY := $(DISTSRCDIR)/otoge/index.js
 
-DIST := $(DISTSRC) $(DISTASSET)
-
+## binary distributions
 BINDIR := $(DISTDIR)/bin
-
 BINWIN := $(BINDIR)/windows/MetronOhm.exe
-
 BINMAC := $(BINDIR)/mac/MetronOhm
-
 BINLINUX := $(BINDIR)/linux/MetronOhm
 
-ENTRY := $(DISTDIR)/src/otoge/index.js
-
-.PHONY: all bin js clean
-
-js: $(DIST)
+.PHONY: all js bin clean
 
 all: js bin
 
-$(DIST): $(DISTDIR)/intermediate $(SRC)
+js: $(DISTSRC) $(DISTASSET)
 
-$(DISTDIR)/intermediate: $(SRC) $(ASSET) node_modules
-	npm run build
-	touch $(DISTDIR)/intermediate
-
-node_modules:
-	npm install
+bin: $(BINWIN) $(BINMAC) $(BINLINUX)
 
 clean:
 	rm -rf $(DISTDIR)
 
-bin: $(BINWIN) $(BINMAC) $(BINLINUX)
+$(DISTSRC) : $(SRC) node_modules
+	npm run build
 
-$(ENTRY): $(DIST)
+$(DISTASSET) : $(ASSET)
+	cp $(ASSETDIR) $(DISTASSETDIR) -rT
 
-$(BINWIN): $(ENTRY)
+node_modules:
+	npm install
+
+$(BINWIN): $(ENTRY) js
 	npx nexe $< --output $@ --target 'windows-x86-12.12.0' --resource ./assets
 
-$(BINMAC): $(ENTRY)
+$(BINMAC): $(ENTRY) js
 	npx nexe $< --output $@ --target 'mac-x64-12.12.0' --resource ./assets
 
-$(BINLINUX): $(ENTRY)
+$(BINLINUX): $(ENTRY) js
 	npx nexe $< --output $@ --target 'linux-x86-12.12.0' --resource ./assets
