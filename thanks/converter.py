@@ -24,16 +24,31 @@ for filename in filelist:
 
 for name in targetlist:
 
+        score = {"version":1.0,"term":0,"notes":[[],[],[],[]],"slideNotes":[]}
+
         with open(name["suffixed"]+'.json', 'r', encoding="utf_8_sig") as f: 
                 jsonData = json.load(f)
 
-        offset = jsonData["offset"] // 1000 + int(sys.argv[1])
+        wavfile = sys.argv[1]+'/'+name["base"]+'.wav'
+
+        if os.path.isfile(wavfile):
+                with wave.open(wavfile,'rb') as f:
+                        rate = f.getframerate()
+                        frames = f.getnframes()
+
+                        milliseconds = (int)(frames/rate * 1000)
+                        # print(milliseconds)
+                        score['term'] = milliseconds + DELAY
+
+        else:
+                score['term'] = None
+                print("Warning: File \"{}\" does not exist!\nCannot determine the term of the song.".format(wavfile), file=sys.stderr)
+
+        offset = jsonData["offset"] // rate
         notes = jsonData["notes"]
         BPM = jsonData["BPM"]
 
         count = 0
-
-        score = {"version":1.0,"term":0,"notes":[[],[],[],[]],"slideNotes":[]}
 
         for note in notes:
                 if note["type"] == 1:
@@ -61,23 +76,6 @@ for name in targetlist:
                         dic = {"startExpires":startExpires, "endExpires":endExpires, "startLane":startLane, "endLane":endLane, "id":id, "speed":1}
                         score["slideNotes"].append(dic)
                 count += 1
-
-
-        wavfile = name["base"]+'.wav'
-
-        if os.path.isfile(wavfile):
-                with wave.open(wavfile,'rb') as f:
-                        rate = f.getframerate()
-                        frames = f.getnframes()
-
-                        milliseconds = (int)(frames/rate * 1000)
-                        # print(milliseconds)
-                        score['term'] = milliseconds + DELAY
-
-        else:
-                score['term'] = None
-                print("Warning: File \"{}\" does not exist!\nCannot determine the term of the song.".format(wavfile), file=sys.stderr)
-
 
         if not os.path.isdir(DESTDIR):
             os.mkdir(DESTDIR)
