@@ -136,6 +136,6 @@ export class MusicStore {
   get(song: string, foot: boolean, difficulty?: Difficulty): Music {
     console.log(`ms::get ${foot}`);
     let d = difficulty || "normal";
-    return this.musics[foot ? "foot" : "plain"]["hard"]["ouroboros"];
+    return this.musics[foot ? "foot" : "plain"][d][song];
   }
 }
