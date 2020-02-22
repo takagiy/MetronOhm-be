@@ -71,7 +71,7 @@ endif
 run: $(BINMAIN)
 ifeq ($(PLATFORM), unknown)
 	@echo Cannot detect the platform.
-	@echo Run the binary in \"$(BINDIR)\" manually.
+	@echo 'Execute the binary "$(BINDIR)/<platform>/MetronOhm[.exe]" manually.'
 else
 	$(BINMAIN)
 endif
