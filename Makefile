@@ -20,7 +20,7 @@ BINWIN := $(BINDIR)/windows/MetronOhm.exe
 BINMAC := $(BINDIR)/mac/MetronOhm
 BINLINUX := $(BINDIR)/linux/MetronOhm
 
-.PHONY: all js bin clean run
+.PHONY: all js bin bin.platform clean run
 
 all: js bin
 
@@ -67,6 +67,8 @@ $(warning Detect the platform, unknown.)
 else
 $(info Detect the platform, $(PLATFORM).)
 endif
+
+bin.platform: $(BINMAIN)
 
 run: $(BINMAIN)
 ifeq ($(PLATFORM), unknown)
