@@ -30,6 +30,8 @@ Build the executable and start the backend as follows.
 make run
 ```
 
+### Optional targets
+
 Compiling this project without the execution will be done with the following command.
 
 ```console
