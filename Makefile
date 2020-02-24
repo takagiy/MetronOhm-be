@@ -31,7 +31,8 @@ bin: $(BINWIN) $(BINMAC) $(BINLINUX)
 clean:
 	rm -rf $(DISTDIR)
 
-external_LICENSE :
+etc/external_LICENSE.txt : script/generate_external_licenses_notice.js node_modules
+	mkdir -p etc
 	npm run genExtCopyright
 
 $(DISTSRC) : $(SRC) node_modules
@@ -43,13 +44,13 @@ $(DISTASSET) : $(ASSET)
 node_modules:
 	npm install
 
-$(BINWIN): $(ENTRY) $(DISTSRC) $(DISTASSET)
+$(BINWIN): $(ENTRY) $(DISTSRC) $(DISTASSET) node_modules
 	npx nexe $< --output $@ --target 'windows-x86-12.12.0' --resource $(DISTASSETDIR)
 
-$(BINMAC): $(ENTRY) $(DISTSRC) $(DISTASSET)
+$(BINMAC): $(ENTRY) $(DISTSRC) $(DISTASSET) node_modules
 	npx nexe $< --output $@ --target 'mac-x64-12.12.0' --resource $(DISTASSETDIR)
 
-$(BINLINUX): $(ENTRY) $(DISTSRC) $(DISTASSET)
+$(BINLINUX): $(ENTRY) $(DISTSRC) $(DISTASSET) node_modules
 	npx nexe $< --output $@ --target 'linux-x86-12.12.0' --resource $(DISTASSETDIR)
 
 SYSNAME := $(shell uname -s || echo "unknown")
