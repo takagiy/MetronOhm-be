@@ -21,6 +21,7 @@
   },
   "dependencies": {
     "express": "^4.17.1",
-    "express-ws": "^4.0.0"
+    "express-ws": "^4.0.0",
+    "license-checker": "^25.0.1"
   }
 }
