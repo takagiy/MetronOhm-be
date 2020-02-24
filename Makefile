@@ -31,6 +31,9 @@ bin: $(BINWIN) $(BINMAC) $(BINLINUX)
 clean:
 	rm -rf $(DISTDIR)
 
+external_LICENSE :
+	npm run genExtCopyright
+
 $(DISTSRC) : $(SRC) node_modules
 	npm run build
 

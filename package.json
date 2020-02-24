@@ -6,7 +6,8 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node dist/src/otoge/index.js",
-    "build": "tsc"
+    "build": "tsc",
+    "genExtCopyright": "node script/generate_external_licenses_notice.js > external_LICENSE"
   },
   "keywords": [],
   "author": "takagiy <takagiy.4dev@gmail.com>",
