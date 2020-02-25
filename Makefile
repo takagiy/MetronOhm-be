@@ -39,7 +39,7 @@ $(DISTSRC) : $(SRC) node_modules
 	npm run build
 
 $(DISTASSET) : $(ASSET)
-	cp $(ASSETDIR)/. $(DISTASSETDIR) -Rf
+	cp -Rf $(ASSETDIR)/. $(DISTASSETDIR)
 
 node_modules:
 	npm install
