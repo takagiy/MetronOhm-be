@@ -4,7 +4,7 @@ import { Music } from "./music";
 import { Rank } from "./rank";
 import { JudgeInfo } from "./judge-info";
 import { Judge } from "./judge";
-import { exec } from "child_process";
+import WavPlayer from "node-wav-player";
 
 import point from "../../assets/point.json";
 import achievement from "../../assets/achievement.json";
@@ -83,7 +83,12 @@ export class Play {
     });
 
     setTimeout(() => {
-      exec(`aplay ${music.wavFile}`);
+      WavPlayer.play({
+        path: music.wavFile,
+        sync: false
+      }).catch((err: any) => {
+        console.log(err);
+      });
     }, this.startTime + 5000 - Date.now());
 
     let endTime = this.startTime + music.score.term + 500;
