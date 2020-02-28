@@ -26,7 +26,7 @@ MIT Licenseのもとで配布します。 （[LICENSE](./LICENSE)を参照）
 あるいは、[実行ファイルをソースからビルドする](#%E3%82%BD%E3%83%BC%E3%82%B9%E3%81%8B%E3%82%89%E3%83%93%E3%83%AB%E3%83%89%E3%81%99%E3%82%8B%E5%A0%B4%E5%90%88)こともできます。
 
 ## ソースからビルドする場合
-*[ビルドの不要なコンパイル済み実行ファイルも用意されています。](https://github.com/takagiy/MetronOhm-be/releases)*
+*[ビルドの不要なコンパイル済み実行ファイルも用意されています。](https://github.com/takagiy/MetronOhm-be/releases)*   
 以下のコマンドで実行ファイルをビルドし、バックエンド部分を起動できます。
 
 ```console
