@@ -1,3 +1,5 @@
+English | [日本語はこちら](README_ja.md)
+
 # MetronOhm-be🎶 - An otoge backend
 MetronOhm-be is the backend part of the otoge *MetronOhm* that is exhibited at the NITAC college festival 2019 by the students of 4E.
 
