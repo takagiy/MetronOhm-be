@@ -8,7 +8,8 @@ MetronOhm-beは2019年度の明石高専高専祭にて4Eの学生により展�
 
 ## ライセンス
 Copyright(c) Yuki Takagi 2020   
-MIT Licenseのもとで配布します。 （[LICENSE](./LICENSE)を参照）
+MIT Licenseのもとで配布します。 （[LICENSE](./LICENSE)を参照）   
+※[releases](https://github.com/takagiy/MetronOhm-be/releases)には、このリポジトリのライセンスが適用されない第三者のオブジェクトが含まれます。（external\_LICENSE.txtを参照）
 
 ## 必要なもの
 遊ぶとき

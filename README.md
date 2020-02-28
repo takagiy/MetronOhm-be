@@ -8,7 +8,9 @@ See [releases](https://github.com/takagiy/MetronOhm-be/releases) for binary dist
 
 ## License
 Copyright(c) Yuki Takagi 2020   
-Distributed under the MIT License. (See [LICENSE](./LICENSE))
+Distributed under the MIT License. (See [LICENSE](./LICENSE))   
+NOTE: [Releases](https://github.com/takagiy/MetronOhm-be/releases) are containing external objects TO THAT LICENSE OF THIS REPOSITORY IS NOT APPLIED.
+(See external\_LICENSE.txt)
 
 ## Requirements
 To play
