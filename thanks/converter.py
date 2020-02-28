@@ -44,7 +44,12 @@ for name in targetlist:
                 score['term'] = None
                 print("Warning: File \"{}\" does not exist!\nCannot determine the term of the song.".format(wavfile), file=sys.stderr)
 
-        offset = jsonData["offset"] // rate
+        offset = 1000 * jsonData["offset"] // rate
+        if True: #name["suffixed"] == "REAL_EYEZ.hard":
+            print(name["suffixed"])
+            #print(jsonData["offset"])
+            #print(rate)
+            print("  offset: {} ms".format(offset))
         notes = jsonData["notes"]
         BPM = jsonData["BPM"]
 
@@ -76,6 +81,10 @@ for name in targetlist:
                         dic = {"startExpires":startExpires, "endExpires":endExpires, "startLane":startLane, "endLane":endLane, "id":id, "speed":1}
                         score["slideNotes"].append(dic)
                 count += 1
+
+        if score["slideNotes"] != []:
+            print("Warning: File \"{}\" contains slide notes.".format(name["suffixed"]), file=sys.stderr)
+            #sys.exit(1)
 
         if not os.path.isdir(DESTDIR):
             os.mkdir(DESTDIR)
