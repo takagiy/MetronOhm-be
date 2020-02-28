@@ -36,7 +36,7 @@ for name in targetlist:
                         rate = f.getframerate()
                         frames = f.getnframes()
 
-                        milliseconds = (int)(frames/rate * 1000)
+                        milliseconds = round(frames/rate * 1000)
                         # print(milliseconds)
                         score['term'] = milliseconds + DELAY
 
@@ -57,7 +57,7 @@ for name in targetlist:
 
         for note in notes:
                 if note["type"] == 1:
-                        expires =(int)(1000 * note["num"] / note["LPB"] * 60 / BPM) + DELAY + offset
+                        expires =round(1000 * (note["num"] - note["LPB"] / jsonData["maxBlock"]) / note["LPB"] * 60 / BPM) + DELAY + offset
                         lane = note["block"]
                         id = count
                         dic = {"expires": expires, "id": id, "speed": 1}
@@ -72,9 +72,9 @@ for name in targetlist:
                         startNote = note
                         endNote = note["notes"][0]
 
-                        startExpires = (int)(1000 * startNote["num"] / startNote["LPB"] * 60 / BPM) + DELAY + offset
+                        startExpires = round(1000 * startNote["num"] / startNote["LPB"] * 60 / BPM) + DELAY + offset
                         startLane = startNote["block"]
-                        endExpires = (int)(1000 * endNote["num"] / endNote["LPB"] * 60 / BPM) + DELAY + offset
+                        endExpires = round(1000 * endNote["num"] / endNote["LPB"] * 60 / BPM) + DELAY + offset
                         endLane = endNote["block"]
 
                         id = count
