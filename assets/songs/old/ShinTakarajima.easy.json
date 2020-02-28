@@ -1,541 +1,541 @@
 {
     "version": 1.0,
-    "term": 134485,
+    "term": 134486,
     "notes": [
         [
             {
-                "expires": 59303,
+                "expires": 59209,
                 "id": 47,
                 "speed": 1
             },
             {
-                "expires": 62341,
+                "expires": 62247,
                 "id": 55,
                 "speed": 1
             },
             {
-                "expires": 62721,
+                "expires": 62627,
                 "id": 56,
                 "speed": 1
             },
             {
-                "expires": 72215,
+                "expires": 72120,
                 "id": 77,
                 "speed": 1
             },
             {
-                "expires": 72594,
+                "expires": 72500,
                 "id": 78,
                 "speed": 1
             },
             {
-                "expires": 85506,
+                "expires": 85411,
                 "id": 104,
                 "speed": 1
             },
             {
-                "expires": 86265,
+                "expires": 86171,
                 "id": 106,
                 "speed": 1
             },
             {
-                "expires": 87025,
+                "expires": 86930,
                 "id": 108,
                 "speed": 1
             }
         ],
         [
             {
-                "expires": 37278,
+                "expires": 37184,
                 "id": 16,
                 "speed": 1
             },
             {
-                "expires": 38797,
+                "expires": 38703,
                 "id": 18,
                 "speed": 1
             },
             {
-                "expires": 40316,
+                "expires": 40222,
                 "id": 20,
                 "speed": 1
             },
             {
-                "expires": 41835,
+                "expires": 41741,
                 "id": 22,
                 "speed": 1
             },
             {
-                "expires": 43354,
+                "expires": 43259,
                 "id": 24,
                 "speed": 1
             },
             {
-                "expires": 44873,
+                "expires": 44778,
                 "id": 26,
                 "speed": 1
             },
             {
-                "expires": 46392,
+                "expires": 46297,
                 "id": 28,
                 "speed": 1
             },
             {
-                "expires": 47911,
+                "expires": 47816,
                 "id": 30,
                 "speed": 1
             },
             {
-                "expires": 49430,
+                "expires": 49335,
                 "id": 32,
                 "speed": 1
             },
             {
-                "expires": 50949,
+                "expires": 50854,
                 "id": 34,
                 "speed": 1
             },
             {
-                "expires": 55506,
+                "expires": 55411,
                 "id": 40,
                 "speed": 1
             },
             {
-                "expires": 57784,
+                "expires": 57690,
                 "id": 43,
                 "speed": 1
             },
             {
-                "expires": 58164,
+                "expires": 58070,
                 "id": 44,
                 "speed": 1
             },
             {
-                "expires": 58734,
+                "expires": 58639,
                 "id": 46,
                 "speed": 1
             },
             {
-                "expires": 59683,
+                "expires": 59589,
                 "id": 48,
                 "speed": 1
             },
             {
-                "expires": 61582,
+                "expires": 61487,
                 "id": 53,
                 "speed": 1
             },
             {
-                "expires": 61962,
+                "expires": 61867,
                 "id": 54,
                 "speed": 1
             },
             {
-                "expires": 63101,
+                "expires": 63006,
                 "id": 57,
                 "speed": 1
             },
             {
-                "expires": 63481,
+                "expires": 63386,
                 "id": 58,
                 "speed": 1
             },
             {
-                "expires": 66139,
+                "expires": 66044,
                 "id": 65,
                 "speed": 1
             },
             {
-                "expires": 66518,
+                "expires": 66424,
                 "id": 66,
                 "speed": 1
             },
             {
-                "expires": 67658,
+                "expires": 67563,
                 "id": 68,
                 "speed": 1
             },
             {
-                "expires": 68037,
+                "expires": 67943,
                 "id": 69,
                 "speed": 1
             },
             {
-                "expires": 69177,
+                "expires": 69082,
                 "id": 71,
                 "speed": 1
             },
             {
-                "expires": 69556,
+                "expires": 69462,
                 "id": 72,
                 "speed": 1
             },
             {
-                "expires": 72974,
+                "expires": 72880,
                 "id": 79,
                 "speed": 1
             },
             {
-                "expires": 73734,
+                "expires": 73639,
                 "id": 81,
                 "speed": 1
             },
             {
-                "expires": 75253,
+                "expires": 75158,
                 "id": 85,
                 "speed": 1
             },
             {
-                "expires": 77531,
+                "expires": 77437,
                 "id": 90,
                 "speed": 1
             },
             {
-                "expires": 77911,
+                "expires": 77816,
                 "id": 91,
                 "speed": 1
             },
             {
-                "expires": 82848,
+                "expires": 82753,
                 "id": 98,
                 "speed": 1
             },
             {
-                "expires": 83227,
+                "expires": 83133,
                 "id": 99,
                 "speed": 1
             },
             {
-                "expires": 84367,
+                "expires": 84272,
                 "id": 101,
                 "speed": 1
             },
             {
-                "expires": 84746,
+                "expires": 84652,
                 "id": 102,
                 "speed": 1
             },
             {
-                "expires": 85126,
+                "expires": 85032,
                 "id": 103,
                 "speed": 1
             },
             {
-                "expires": 85886,
+                "expires": 85791,
                 "id": 105,
                 "speed": 1
             },
             {
-                "expires": 86645,
+                "expires": 86551,
                 "id": 107,
                 "speed": 1
             },
             {
-                "expires": 87405,
+                "expires": 87310,
                 "id": 109,
                 "speed": 1
             },
             {
-                "expires": 88164,
+                "expires": 88070,
                 "id": 111,
                 "speed": 1
             },
             {
-                "expires": 88924,
+                "expires": 88829,
                 "id": 113,
                 "speed": 1
             },
             {
-                "expires": 89683,
+                "expires": 89589,
                 "id": 115,
                 "speed": 1
             },
             {
-                "expires": 92721,
+                "expires": 92627,
                 "id": 123,
                 "speed": 1
             },
             {
-                "expires": 93481,
+                "expires": 93386,
                 "id": 125,
                 "speed": 1
             },
             {
-                "expires": 93860,
+                "expires": 93766,
                 "id": 128,
                 "speed": 1
             },
             {
-                "expires": 96139,
+                "expires": 96044,
                 "id": 131,
                 "speed": 1
             },
             {
-                "expires": 96518,
+                "expires": 96424,
                 "id": 132,
                 "speed": 1
             },
             {
-                "expires": 96898,
+                "expires": 96804,
                 "id": 134,
                 "speed": 1
             },
             {
-                "expires": 121582,
+                "expires": 121487,
                 "id": 153,
                 "speed": 1
             }
         ],
         [
             {
-                "expires": 36518,
+                "expires": 36424,
                 "id": 15,
                 "speed": 1
             },
             {
-                "expires": 38037,
+                "expires": 37943,
                 "id": 17,
                 "speed": 1
             },
             {
-                "expires": 39556,
+                "expires": 39462,
                 "id": 19,
                 "speed": 1
             },
             {
-                "expires": 41075,
+                "expires": 40981,
                 "id": 21,
                 "speed": 1
             },
             {
-                "expires": 42594,
+                "expires": 42500,
                 "id": 23,
                 "speed": 1
             },
             {
-                "expires": 44113,
+                "expires": 44019,
                 "id": 25,
                 "speed": 1
             },
             {
-                "expires": 45632,
+                "expires": 45538,
                 "id": 27,
                 "speed": 1
             },
             {
-                "expires": 47151,
+                "expires": 47057,
                 "id": 29,
                 "speed": 1
             },
             {
-                "expires": 52468,
+                "expires": 52373,
                 "id": 36,
                 "speed": 1
             },
             {
-                "expires": 53987,
+                "expires": 53892,
                 "id": 38,
                 "speed": 1
             },
             {
-                "expires": 57025,
+                "expires": 56930,
                 "id": 42,
                 "speed": 1
             },
             {
-                "expires": 58734,
+                "expires": 58639,
                 "id": 45,
                 "speed": 1
             },
             {
-                "expires": 60063,
+                "expires": 59968,
                 "id": 49,
                 "speed": 1
             },
             {
-                "expires": 60822,
+                "expires": 60728,
                 "id": 51,
                 "speed": 1
             },
             {
-                "expires": 61202,
+                "expires": 61108,
                 "id": 52,
                 "speed": 1
             },
             {
-                "expires": 63860,
+                "expires": 63766,
                 "id": 59,
                 "speed": 1
             },
             {
-                "expires": 64240,
+                "expires": 64146,
                 "id": 60,
                 "speed": 1
             },
             {
-                "expires": 65379,
+                "expires": 65285,
                 "id": 63,
                 "speed": 1
             },
             {
-                "expires": 65759,
+                "expires": 65665,
                 "id": 64,
                 "speed": 1
             },
             {
-                "expires": 70696,
+                "expires": 70601,
                 "id": 74,
                 "speed": 1
             },
             {
-                "expires": 71075,
+                "expires": 70981,
                 "id": 75,
                 "speed": 1
             },
             {
-                "expires": 73354,
+                "expires": 73259,
                 "id": 80,
                 "speed": 1
             },
             {
-                "expires": 74113,
+                "expires": 74019,
                 "id": 82,
                 "speed": 1
             },
             {
-                "expires": 74873,
+                "expires": 74778,
                 "id": 84,
                 "speed": 1
             },
             {
-                "expires": 75632,
+                "expires": 75538,
                 "id": 86,
                 "speed": 1
             },
             {
-                "expires": 76772,
+                "expires": 76677,
                 "id": 88,
                 "speed": 1
             },
             {
-                "expires": 77151,
+                "expires": 77057,
                 "id": 89,
                 "speed": 1
             },
             {
-                "expires": 79810,
+                "expires": 79715,
                 "id": 92,
                 "speed": 1
             },
             {
-                "expires": 80189,
+                "expires": 80095,
                 "id": 93,
                 "speed": 1
             },
             {
-                "expires": 81329,
+                "expires": 81234,
                 "id": 95,
                 "speed": 1
             },
             {
-                "expires": 81708,
+                "expires": 81614,
                 "id": 96,
                 "speed": 1
             },
             {
-                "expires": 87784,
+                "expires": 87690,
                 "id": 110,
                 "speed": 1
             },
             {
-                "expires": 88544,
+                "expires": 88449,
                 "id": 112,
                 "speed": 1
             },
             {
-                "expires": 89303,
+                "expires": 89209,
                 "id": 114,
                 "speed": 1
             },
             {
-                "expires": 90063,
+                "expires": 89968,
                 "id": 116,
                 "speed": 1
             },
             {
-                "expires": 90822,
+                "expires": 90728,
                 "id": 118,
                 "speed": 1
             },
             {
-                "expires": 91582,
+                "expires": 91487,
                 "id": 120,
                 "speed": 1
             },
             {
-                "expires": 92341,
+                "expires": 92247,
                 "id": 122,
                 "speed": 1
             },
             {
-                "expires": 93101,
+                "expires": 93006,
                 "id": 124,
                 "speed": 1
             },
             {
-                "expires": 94620,
+                "expires": 94525,
                 "id": 129,
                 "speed": 1
             },
             {
-                "expires": 95379,
+                "expires": 95285,
                 "id": 130,
                 "speed": 1
             },
             {
-                "expires": 96518,
+                "expires": 96424,
                 "id": 133,
                 "speed": 1
             },
             {
-                "expires": 96898,
+                "expires": 96804,
                 "id": 135,
                 "speed": 1
             }
         ],
         [
             {
-                "expires": 60443,
+                "expires": 60348,
                 "id": 50,
                 "speed": 1
             },
             {
-                "expires": 64620,
+                "expires": 64525,
                 "id": 61,
                 "speed": 1
             },
             {
-                "expires": 65000,
+                "expires": 64905,
                 "id": 62,
                 "speed": 1
             },
             {
-                "expires": 74493,
+                "expires": 74399,
                 "id": 83,
                 "speed": 1
             },
             {
-                "expires": 90443,
+                "expires": 90348,
                 "id": 117,
                 "speed": 1
             },
             {
-                "expires": 91202,
+                "expires": 91108,
                 "id": 119,
                 "speed": 1
             },
             {
-                "expires": 91962,
+                "expires": 91867,
                 "id": 121,
                 "speed": 1
             }
@@ -544,14 +544,14 @@
     "slideNotes": [
         {
             "startExpires": 24367,
-            "endExpires": 25126,
+            "endExpires": 25127,
             "startLane": 1,
             "endLane": 1,
             "id": 0,
             "speed": 1
         },
         {
-            "startExpires": 25126,
+            "startExpires": 25127,
             "endExpires": 25886,
             "startLane": 2,
             "endLane": 2,
@@ -560,14 +560,14 @@
         },
         {
             "startExpires": 25886,
-            "endExpires": 26645,
+            "endExpires": 26646,
             "startLane": 1,
             "endLane": 1,
             "id": 2,
             "speed": 1
         },
         {
-            "startExpires": 26645,
+            "startExpires": 26646,
             "endExpires": 27405,
             "startLane": 2,
             "endLane": 2,
@@ -576,14 +576,14 @@
         },
         {
             "startExpires": 27405,
-            "endExpires": 28164,
+            "endExpires": 28165,
             "startLane": 1,
             "endLane": 1,
             "id": 4,
             "speed": 1
         },
         {
-            "startExpires": 28164,
+            "startExpires": 28165,
             "endExpires": 28924,
             "startLane": 2,
             "endLane": 2,
@@ -592,14 +592,14 @@
         },
         {
             "startExpires": 28924,
-            "endExpires": 29683,
+            "endExpires": 29684,
             "startLane": 1,
             "endLane": 1,
             "id": 6,
             "speed": 1
         },
         {
-            "startExpires": 29683,
+            "startExpires": 29684,
             "endExpires": 30443,
             "startLane": 2,
             "endLane": 2,
@@ -608,14 +608,14 @@
         },
         {
             "startExpires": 30443,
-            "endExpires": 31202,
+            "endExpires": 31203,
             "startLane": 1,
             "endLane": 1,
             "id": 8,
             "speed": 1
         },
         {
-            "startExpires": 31202,
+            "startExpires": 31203,
             "endExpires": 31962,
             "startLane": 2,
             "endLane": 2,
@@ -624,14 +624,14 @@
         },
         {
             "startExpires": 31962,
-            "endExpires": 32721,
+            "endExpires": 32722,
             "startLane": 1,
             "endLane": 1,
             "id": 10,
             "speed": 1
         },
         {
-            "startExpires": 32721,
+            "startExpires": 32722,
             "endExpires": 33481,
             "startLane": 2,
             "endLane": 2,
@@ -640,14 +640,14 @@
         },
         {
             "startExpires": 33481,
-            "endExpires": 34240,
+            "endExpires": 34241,
             "startLane": 1,
             "endLane": 1,
             "id": 12,
             "speed": 1
         },
         {
-            "startExpires": 34240,
+            "startExpires": 34241,
             "endExpires": 35000,
             "startLane": 2,
             "endLane": 2,
@@ -663,7 +663,7 @@
             "speed": 1
         },
         {
-            "startExpires": 48670,
+            "startExpires": 48671,
             "endExpires": 49430,
             "startLane": 2,
             "endLane": 2,
@@ -671,7 +671,7 @@
             "speed": 1
         },
         {
-            "startExpires": 50189,
+            "startExpires": 50190,
             "endExpires": 50949,
             "startLane": 2,
             "endLane": 2,
@@ -679,7 +679,7 @@
             "speed": 1
         },
         {
-            "startExpires": 51708,
+            "startExpires": 51709,
             "endExpires": 52468,
             "startLane": 1,
             "endLane": 1,
@@ -687,7 +687,7 @@
             "speed": 1
         },
         {
-            "startExpires": 53227,
+            "startExpires": 53228,
             "endExpires": 53987,
             "startLane": 1,
             "endLane": 1,
@@ -695,7 +695,7 @@
             "speed": 1
         },
         {
-            "startExpires": 54746,
+            "startExpires": 54747,
             "endExpires": 55506,
             "startLane": 2,
             "endLane": 2,
@@ -703,7 +703,7 @@
             "speed": 1
         },
         {
-            "startExpires": 56265,
+            "startExpires": 56266,
             "endExpires": 57025,
             "startLane": 1,
             "endLane": 1,
@@ -711,7 +711,7 @@
             "speed": 1
         },
         {
-            "startExpires": 66898,
+            "startExpires": 66899,
             "endExpires": 67658,
             "startLane": 0,
             "endLane": 0,
@@ -719,7 +719,7 @@
             "speed": 1
         },
         {
-            "startExpires": 68417,
+            "startExpires": 68418,
             "endExpires": 69177,
             "startLane": 2,
             "endLane": 2,
@@ -727,7 +727,7 @@
             "speed": 1
         },
         {
-            "startExpires": 69936,
+            "startExpires": 69937,
             "endExpires": 70696,
             "startLane": 3,
             "endLane": 3,
@@ -735,7 +735,7 @@
             "speed": 1
         },
         {
-            "startExpires": 71455,
+            "startExpires": 71456,
             "endExpires": 72215,
             "startLane": 1,
             "endLane": 1,
@@ -743,7 +743,7 @@
             "speed": 1
         },
         {
-            "startExpires": 76012,
+            "startExpires": 76013,
             "endExpires": 76772,
             "startLane": 1,
             "endLane": 1,
@@ -751,7 +751,7 @@
             "speed": 1
         },
         {
-            "startExpires": 80569,
+            "startExpires": 80570,
             "endExpires": 81329,
             "startLane": 1,
             "endLane": 1,
@@ -759,7 +759,7 @@
             "speed": 1
         },
         {
-            "startExpires": 82088,
+            "startExpires": 82089,
             "endExpires": 82848,
             "startLane": 2,
             "endLane": 2,
@@ -767,7 +767,7 @@
             "speed": 1
         },
         {
-            "startExpires": 83607,
+            "startExpires": 83608,
             "endExpires": 84367,
             "startLane": 2,
             "endLane": 2,
@@ -775,7 +775,7 @@
             "speed": 1
         },
         {
-            "startExpires": 93860,
+            "startExpires": 93861,
             "endExpires": 96139,
             "startLane": 2,
             "endLane": 2,
@@ -783,7 +783,7 @@
             "speed": 1
         },
         {
-            "startExpires": 93860,
+            "startExpires": 93861,
             "endExpires": 96139,
             "startLane": 1,
             "endLane": 1,
@@ -904,22 +904,22 @@
         },
         {
             "startExpires": 120063,
-            "endExpires": 120632,
+            "endExpires": 120633,
             "startLane": 2,
             "endLane": 2,
             "id": 150,
             "speed": 1
         },
         {
-            "startExpires": 120632,
-            "endExpires": 121107,
+            "startExpires": 120633,
+            "endExpires": 121108,
             "startLane": 1,
             "endLane": 1,
             "id": 151,
             "speed": 1
         },
         {
-            "startExpires": 121107,
+            "startExpires": 121108,
             "endExpires": 121582,
             "startLane": 2,
             "endLane": 2,
@@ -928,7 +928,7 @@
         },
         {
             "startExpires": 121962,
-            "endExpires": 126518,
+            "endExpires": 126519,
             "startLane": 1,
             "endLane": 1,
             "id": 154,
@@ -936,7 +936,7 @@
         },
         {
             "startExpires": 121962,
-            "endExpires": 126518,
+            "endExpires": 126519,
             "startLane": 2,
             "endLane": 2,
             "id": 155,
