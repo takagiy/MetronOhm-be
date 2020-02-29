@@ -57,7 +57,7 @@ for name in targetlist:
 
         for note in notes:
                 if note["type"] == 1:
-                        expires =round(1000 * (note["num"] - note["LPB"] / jsonData["maxBlock"]) / note["LPB"] * 60 / BPM) + DELAY + offset
+                        expires =round(1000 * (note["num"] - 0 * note["LPB"] / jsonData["maxBlock"]) / note["LPB"] * 60 / BPM) + DELAY + offset
                         lane = note["block"]
                         id = count
                         dic = {"expires": expires, "id": id, "speed": 1}
