@@ -1,25 +1,30 @@
 import * as fs from "fs";
 import { exec } from "child_process";
-import { argv, exit } from "process";
+import { argv } from "process";
 import { Score } from "../otoge/score";
 
-let startTime = Date.now();
+const startTime = Date.now();
 
-fs.readFile(`./assets/songs/${argv[2]}.${argv[3]}.json`, (err, data) => {
-  if (err) {
-    console.log(err);
-    exit(1);
-  }
-  let score: Score = JSON.parse(data.toString());
-  score.notes.forEach(lane =>
-    lane.forEach(note => {
-      setTimeout(() => {
-        exec(`aplay ./clap.wav`);
-      }, startTime + note.expires - Date.now() + (+argv[4]));
-    })
-  );
-});
+const score: Score = JSON.parse(fs.readFileSync(`./assets/songs/${argv[2]}.${argv[3]}.json`, "utf-8"));
+
+const song = `aplay ./private-assets/wav/${argv[2]}.wav`;
+
+const clap = `aplay ./clap.wav`;
+
+setInterval(() => {
+  console.log("");
+}, 100);
 
 setTimeout(() => {
-  exec(`aplay ./private-assets/wav/${argv[2]}.wav`);
-}, startTime + 5000 - Date.now());
+  console.log(Date.now() - startTime);
+  exec(song);
+}, startTime + 5000 + parseInt(argv[4]) - Date.now());
+
+score.notes.forEach(lane =>
+  lane.forEach(note => {
+    setTimeout(() => {
+      console.log(Date.now() - startTime);
+      exec(clap);
+    }, startTime + note.expires - Date.now());
+  })
+);
