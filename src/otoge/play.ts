@@ -4,7 +4,8 @@ import { Music } from "./music";
 import { Rank } from "./rank";
 import { JudgeInfo } from "./judge-info";
 import { Judge } from "./judge";
-import WavPlayer from "node-wav-player";
+import { exec } from "child_process";
+import * as OS from "os";
 
 import point from "../../assets/point.json";
 import achievement from "../../assets/achievement.json";
@@ -14,8 +15,7 @@ export class Play {
 
   scoreLimit: number;
 
-  // ToDo: Asynchronous initialization
-  startTime!: number;
+  startTime: number;
 
   score: number;
 
@@ -82,13 +82,21 @@ export class Play {
       });
     });
 
+    let platform = OS.platform();
+
+    let playCmd = platform === 'darwin' ? `afplay ${music.wavFile}` :
+                  platform === 'win32' ? `powershell -c (New-Object Media.SoundPlayer "${music.wavFile}").PlaySync();` :
+                  `aplay ${music.wavFile}`;
+
     setTimeout(() => {
-      WavPlayer.play({
-        path: music.wavFile,
-        sync: false
-      }).catch((err: any) => {
-        console.log(err);
-      });
+      //WavPlayer.play({
+      //  path: music.wavFile,
+      //  sync: false
+      //}).catch((err: any) => {
+      //  console.log(err);
+      //});
+      //console.log(Date.now() - this.startTime);
+      exec(playCmd);
     }, this.startTime + 5000 - Date.now());
 
     let endTime = this.startTime + music.score.term + 500;
