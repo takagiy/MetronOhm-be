@@ -20,13 +20,35 @@ BINWIN := $(BINDIR)/windows/MetronOhm.exe
 BINMAC := $(BINDIR)/mac/MetronOhm
 BINLINUX := $(BINDIR)/linux/MetronOhm
 
-.PHONY: all js bin bin.platform clean run
+## package information
+PKGVER := $(shell node -p -e 'require("./package.json").version' | sed -e 's/\./-/g')
 
-all: js bin
+## zipped releases
+ZIPWIN_REL := MetronOhm-windows-$(PKGVER).zip
+ZIPMAC_REL := MetronOhm-mac-$(PKGVER).zip
+ZIPLINUX_REL := MetronOhm-linux-$(PKGVER).zip
+ZIPDIR := $(DISTDIR)/releases
+ZIPWIN := $(ZIPDIR)/$(ZIPWIN_REL)
+ZIPMAC := $(ZIPDIR)/$(ZIPMAC_REL)
+ZIPLINUX := $(ZIPDIR)/$(ZIPLINUX_REL)
+
+## directories to be zipped
+ZIPDIRWIN_REL := MetronOhm-windows-$(PKGVER)
+ZIPDIRMAC_REL := MetronOhm-mac-$(PKGVER)
+ZIPDIRLINUX_REL := MetronOhm-linux-$(PKGVER)
+ZIPDIRWIN := $(ZIPDIR)/$(ZIPDIRWIN_REL)
+ZIPDIRMAC := $(ZIPDIR)/$(ZIPDIRMAC_REL)
+ZIPDIRLINUX := $(ZIPDIR)/$(ZIPDIRLINUX_REL)
+
+.PHONY: all js bin bin.platform zip clean run
+
+all: js bin zip
 
 js: $(DISTSRC) $(DISTASSET)
 
 bin: $(BINWIN) $(BINMAC) $(BINLINUX)
+
+zip: $(ZIPWIN) $(ZIPMAC) $(ZIPLINUX)
 
 clean:
 	rm -rf $(DISTDIR)
@@ -52,6 +74,27 @@ $(BINMAC): $(ENTRY) $(DISTSRC) $(DISTASSET) node_modules
 
 $(BINLINUX): $(ENTRY) $(DISTSRC) $(DISTASSET) node_modules
 	npx nexe $< --output $@ --target 'linux-x86-12.12.0' --resource $(DISTASSETDIR)
+
+$(ZIPWIN): $(BINWIN) LICENSE etc/external_LICENSE.txt
+	mkdir -p $(ZIPDIRWIN)
+	cp $(BINWIN) $(ZIPDIRWIN)
+	cp LICENSE $(ZIPDIRWIN)/LICENSE.txt
+	cp etc/external_LICENSE.txt $(ZIPDIRWIN)
+	cd $(ZIPDIR) && zip $(ZIPWIN_REL) $(ZIPDIRWIN_REL)/*
+
+$(ZIPMAC): $(BINMAC) LICENSE etc/external_LICENSE.txt
+	mkdir -p $(ZIPDIRMAC)
+	cp $(BINMAC) $(ZIPDIRMAC)
+	cp LICENSE $(ZIPDIRMAC)/LICENSE.txt
+	cp etc/external_LICENSE.txt $(ZIPDIRMAC)
+	cd $(ZIPDIR) && zip $(ZIPMAC_REL) $(ZIPDIRMAC_REL)/*
+
+$(ZIPLINUX): $(BINLINUX) LICENSE etc/external_LICENSE.txt
+	mkdir -p $(ZIPDIRLINUX)
+	cp $(BINLINUX) $(ZIPDIRLINUX)
+	cp LICENSE $(ZIPDIRLINUX)/LICENSE.txt
+	cp etc/external_LICENSE.txt $(ZIPDIRLINUX)
+	cd $(ZIPDIR) && zip $(ZIPLINUX_REL) $(ZIPDIRLINUX_REL)/*
 
 SYSNAME := $(shell uname -s || echo "unknown")
 
