@@ -19,8 +19,7 @@
       ],
       "@assets/*": [
         "asstes/*"
-      ],
-      "node-wav-player": ["typing/node-wav-player.d.ts"]
+      ]
     }
   },
   "include": [
