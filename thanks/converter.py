@@ -82,9 +82,11 @@ for name in targetlist:
                         score["slideNotes"].append(dic)
                 count += 1
 
-        if score["slideNotes"] != []:
-            print("Warning: File \"{}\" contains slide notes.".format(name["suffixed"]), file=sys.stderr)
-            #sys.exit(1)
+        if len(sys.argv) >= 3 and sys.argv[2] == "nofoot":
+            if score["slideNotes"] != []:
+                print("Warning: File \"{}\" contains slide notes.".format(name["suffixed"]), file=sys.stderr)
+                #sys.exit(1)
+            score["slideNotes"] = []
 
         if not os.path.isdir(DESTDIR):
             os.mkdir(DESTDIR)
