@@ -24,18 +24,18 @@ BINLINUX := $(BINDIR)/linux/MetronOhm
 PKGVER := $(shell node -p -e 'require("./package.json").version' | sed -e 's/\./-/g')
 
 ## zipped releases
-ZIPWIN_REL := MetronOhm-windows-$(PKGVER).zip
-ZIPMAC_REL := MetronOhm-mac-$(PKGVER).zip
-ZIPLINUX_REL := MetronOhm-linux-$(PKGVER).zip
+ZIPWIN_REL := MetronOhm-64bit-windows-$(PKGVER).zip
+ZIPMAC_REL := MetronOhm-64bit-mac-$(PKGVER).zip
+ZIPLINUX_REL := MetronOhm-64bit-linux-$(PKGVER).zip
 ZIPDIR := $(DISTDIR)/releases
 ZIPWIN := $(ZIPDIR)/$(ZIPWIN_REL)
 ZIPMAC := $(ZIPDIR)/$(ZIPMAC_REL)
 ZIPLINUX := $(ZIPDIR)/$(ZIPLINUX_REL)
 
 ## directories to be zipped
-ZIPDIRWIN_REL := MetronOhm-windows-$(PKGVER)
-ZIPDIRMAC_REL := MetronOhm-mac-$(PKGVER)
-ZIPDIRLINUX_REL := MetronOhm-linux-$(PKGVER)
+ZIPDIRWIN_REL := $(ZIPWIN_REL:%.zip=%)
+ZIPDIRMAC_REL := $(ZIPMAC_REL:%.zip=%)
+ZIPDIRLINUX_REL := $(ZIPLINUX_REL:%.zip=%)
 ZIPDIRWIN := $(ZIPDIR)/$(ZIPDIRWIN_REL)
 ZIPDIRMAC := $(ZIPDIR)/$(ZIPDIRMAC_REL)
 ZIPDIRLINUX := $(ZIPDIR)/$(ZIPDIRLINUX_REL)
@@ -67,13 +67,13 @@ node_modules:
 	npm install
 
 $(BINWIN): $(ENTRY) $(DISTSRC) $(DISTASSET) node_modules
-	npx nexe $< --output $@ --target 'windows-x86-12.12.0' --resource $(DISTASSETDIR)
+	npx nexe $< --output $@ --target 'windows-x64-12.12.0' --resource $(DISTASSETDIR)
 
 $(BINMAC): $(ENTRY) $(DISTSRC) $(DISTASSET) node_modules
 	npx nexe $< --output $@ --target 'mac-x64-12.12.0' --resource $(DISTASSETDIR)
 
 $(BINLINUX): $(ENTRY) $(DISTSRC) $(DISTASSET) node_modules
-	npx nexe $< --output $@ --target 'linux-x86-12.12.0' --resource $(DISTASSETDIR)
+	npx nexe $< --output $@ --target 'linux-x64-12.12.0' --resource $(DISTASSETDIR)
 
 $(ZIPWIN): $(BINWIN) LICENSE etc/external_LICENSE.txt
 	mkdir -p $(ZIPDIRWIN)
