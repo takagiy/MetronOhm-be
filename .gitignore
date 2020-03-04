@@ -1,3 +1,4 @@
 dist/
 private-assets/
 node_modules/
+!external/ffi-libs/**
