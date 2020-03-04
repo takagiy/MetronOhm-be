@@ -5,7 +5,9 @@ import { Score } from "../otoge/score";
 
 const startTime = Date.now();
 
-const score: Score = JSON.parse(fs.readFileSync(`./assets/songs/${argv[2]}.${argv[3]}.json`, "utf-8"));
+const score: Score = JSON.parse(
+  fs.readFileSync(`./assets/songs/${argv[2]}.${argv[3]}.json`, "utf-8")
+);
 
 const song = `aplay ./private-assets/wav/${argv[2]}.wav`;
 
