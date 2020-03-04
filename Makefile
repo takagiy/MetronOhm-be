@@ -67,7 +67,7 @@ node_modules:
 	npm install
 
 $(BINWIN): $(ENTRY) $(DISTSRC) $(DISTASSET) node_modules
-	npx nexe $< --output $@ --target 'windows-x64-12.12.0' --resource $(DISTASSETDIR)
+	npx nexe $< --output $@ --target 'windows-x64-10.16.0' --resource $(DISTASSETDIR)
 
 $(BINMAC): $(ENTRY) $(DISTSRC) $(DISTASSET) node_modules
 	npx nexe $< --output $@ --target 'mac-x64-12.12.0' --resource $(DISTASSETDIR)
@@ -75,12 +75,13 @@ $(BINMAC): $(ENTRY) $(DISTSRC) $(DISTASSET) node_modules
 $(BINLINUX): $(ENTRY) $(DISTSRC) $(DISTASSET) node_modules
 	npx nexe $< --output $@ --target 'linux-x64-12.12.0' --resource $(DISTASSETDIR)
 
-$(ZIPWIN): $(BINWIN) LICENSE etc/external_LICENSE.txt
+$(ZIPWIN): $(BINWIN) LICENSE etc/external_LICENSE.txt external/ffi-libs/windows/node_modules/ffi/build/Release/ffi_bindings.node external/ffi-libs/windows/node_modules/ref/build/Release/binding.node
 	mkdir -p $(ZIPDIRWIN)
 	cp $(BINWIN) $(ZIPDIRWIN)
 	cp LICENSE $(ZIPDIRWIN)/LICENSE.txt
 	cp etc/external_LICENSE.txt $(ZIPDIRWIN)
-	cd $(ZIPDIR) && zip $(ZIPWIN_REL) $(ZIPDIRWIN_REL)/*
+	cp -r external/ffi-libs/windows/node_modules $(ZIPDIRWIN)
+	cd $(ZIPDIR) && zip $(ZIPWIN_REL) $$(find $(ZIPDIRWIN_REL) -type f)
 
 $(ZIPMAC): $(BINMAC) LICENSE etc/external_LICENSE.txt
 	mkdir -p $(ZIPDIRMAC)

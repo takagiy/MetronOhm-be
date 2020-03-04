@@ -4,6 +4,7 @@ import { Music } from "./music";
 import { Rank } from "./rank";
 import { JudgeInfo } from "./judge-info";
 import { Judge } from "./judge";
+import * as Winmm from "./winmm";
 import { exec } from "child_process";
 import * as OS from "os";
 
@@ -84,20 +85,34 @@ export class Play {
 
     let platform = OS.platform();
 
-    let playCmd = platform === 'darwin' ? `afplay ${music.wavFile}` :
-                  platform === 'win32' ? `powershell -c (New-Object Media.SoundPlayer "${music.wavFile}").PlaySync();` :
-                  `aplay ${music.wavFile}`;
-
-    setTimeout(() => {
-      //WavPlayer.play({
-      //  path: music.wavFile,
-      //  sync: false
-      //}).catch((err: any) => {
-      //  console.log(err);
+    if (platform === "win32") {
+      setTimeout(() => {
+        Winmm.playSound(
+          music.wavFile,
+          null,
+          Winmm.SND_FILENAME | Winmm.SND_ASYNC
+        );
+      }, this.startTime + 5000 - Date.now());
+      //Process.on("exit", code => {
+      //  Winmm.playSound(null, null, 0);
       //});
-      //console.log(Date.now() - this.startTime);
-      exec(playCmd);
-    }, this.startTime + 5000 - Date.now());
+    } else {
+      let playCmd =
+        platform === "darwin"
+          ? `afplay ${music.wavFile}`
+          : `aplay ${music.wavFile}`;
+
+      setTimeout(() => {
+        //WavPlayer.play({
+        //  path: music.wavFile,
+        //  sync: false
+        //}).catch((err: any) => {
+        //  console.log(err);
+        //});
+        //console.log(Date.now() - this.startTime);
+        exec(playCmd);
+      }, this.startTime + 5000 - Date.now());
+    }
 
     let endTime = this.startTime + music.score.term + 500;
 
