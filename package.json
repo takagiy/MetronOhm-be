@@ -7,7 +7,9 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node dist/src/otoge/index.js",
     "build": "tsc",
-    "genExtCopyright": "node script/generate_external_licenses_notice.js > etc/external_LICENSE.txt"
+    "genExtCopyright": "node script/generate_external_licenses_notice.js > etc/external_LICENSE.txt",
+    "_postinstall": "node ./node_modules/platform-dependent-modules/cli.js",
+    "postinstall": "npm run _postinstall"
   },
   "keywords": [],
   "author": "takagiy <takagiy.4dev@gmail.com>",
@@ -18,13 +20,23 @@
     "@types/ffi": "^0.2.2",
     "@types/node": "^12.7.11",
     "nexe": "^3.3.2",
+    "platform-dependent-modules": "0.0.14",
     "prettier": "1.19.1",
     "typescript": "^3.6.3"
   },
   "dependencies": {
     "express": "^4.17.1",
     "express-ws": "^4.0.0",
-    "ffi": "^2.3.0",
     "license-checker": "^25.0.1"
+  },
+  "optionalDependencies": {
+    "ffi": "^2.3.0"
+  },
+  "config": {
+    "platformDependentModules": {
+      "win32": [
+        "ffi@^2.3.0"
+      ]
+    }
   }
 }
