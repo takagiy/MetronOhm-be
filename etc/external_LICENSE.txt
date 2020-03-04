@@ -353,6 +353,31 @@ MIT License
     OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
     SOFTWARE
 ================================================================================
+@types/ffi@0.2.2
+- repository: https://github.com/DefinitelyTyped/DefinitelyTyped
+--------------------------------------------------------------------------------
+MIT License
+
+    Copyright (c) Microsoft Corporation. All rights reserved.
+
+    Permission is hereby granted, free of charge, to any person obtaining a copy
+    of this software and associated documentation files (the "Software"), to deal
+    in the Software without restriction, including without limitation the rights
+    to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+    copies of the Software, and to permit persons to whom the Software is
+    furnished to do so, subject to the following conditions:
+
+    The above copyright notice and this permission notice shall be included in all
+    copies or substantial portions of the Software.
+
+    THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+    IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+    FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+    AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+    LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+    OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+    SOFTWARE
+================================================================================
 @types/glob@7.1.1
 - repository: https://github.com/DefinitelyTyped/DefinitelyTyped
 --------------------------------------------------------------------------------
@@ -477,6 +502,53 @@ MIT License
     LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
     OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
     SOFTWARE
+================================================================================
+@types/ref-struct@0.0.29
+- repository: https://github.com/DefinitelyTyped/DefinitelyTyped
+--------------------------------------------------------------------------------
+MIT License
+
+    Copyright (c) Microsoft Corporation. All rights reserved.
+
+    Permission is hereby granted, free of charge, to any person obtaining a copy
+    of this software and associated documentation files (the "Software"), to deal
+    in the Software without restriction, including without limitation the rights
+    to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+    copies of the Software, and to permit persons to whom the Software is
+    furnished to do so, subject to the following conditions:
+
+    The above copyright notice and this permission notice shall be included in all
+    copies or substantial portions of the Software.
+
+    THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+    IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+    FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+    AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+    LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+    OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+    SOFTWARE
+================================================================================
+@types/ref@0.0.28
+- repository: https://github.com/DefinitelyTyped/DefinitelyTyped
+--------------------------------------------------------------------------------
+# Installation
+> `npm install --save @types/ref`
+
+# Summary
+This package contains type definitions for ref (https://github.com/TooTallNate/ref).
+
+# Details
+Files were exported from https://www.github.com/DefinitelyTyped/DefinitelyTyped/tree/types-2.0/ref
+
+Additional Details
+ * Last updated: Mon, 19 Sep 2016 17:28:59 GMT
+ * File structure: ProperModule
+ * Library Dependencies: node
+ * Module Dependencies: none
+ * Global values: none
+
+# Credits
+These definitions were written by Paul Loyd <https://github.com/loyd>.
 ================================================================================
 @types/serve-static@1.13.3
 - repository: https://github.com/DefinitelyTyped/DefinitelyTyped
@@ -1292,6 +1364,108 @@ AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
 LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 THE SOFTWARE.
+================================================================================
+bindings@1.2.1
+- repository: https://github.com/TooTallNate/node-bindings
+- copyright:  Copyright (c) 2012 Nathan Rajlich &lt;nathan@tootallnate.net&gt;
+--------------------------------------------------------------------------------
+node-bindings
+=============
+### Helper module for loading your native module's .node file
+
+This is a helper module for authors of Node.js native addon modules.
+It is basically the "swiss army knife" of `require()`ing your native module's
+`.node` file.
+
+Throughout the course of Node's native addon history, addons have ended up being
+compiled in a variety of different places, depending on which build tool and which
+version of node was used. To make matters worse, now the _gyp_ build tool can
+produce either a _Release_ or _Debug_ build, each being built into different
+locations.
+
+This module checks _all_ the possible locations that a native addon would be built
+at, and returns the first one that loads successfully.
+
+
+Installation
+------------
+
+Install with `npm`:
+
+``` bash
+$ npm install bindings
+```
+
+Or add it to the `"dependencies"` section of your _package.json_ file.
+
+
+Example
+-------
+
+`require()`ing the proper bindings file for the current node version, platform
+and architecture is as simple as:
+
+``` js
+var bindings = require('bindings')('binding.node')
+
+// Use your bindings defined in your C files
+bindings.your_c_function()
+```
+
+
+Nice Error Output
+-----------------
+
+When the `.node` file could not be loaded, `node-bindings` throws an Error with
+a nice error message telling you exactly what was tried. You can also check the
+`err.tries` Array property.
+
+```
+Error: Could not load the bindings file. Tried:
+ → /Users/nrajlich/ref/build/binding.node
+ → /Users/nrajlich/ref/build/Debug/binding.node
+ → /Users/nrajlich/ref/build/Release/binding.node
+ → /Users/nrajlich/ref/out/Debug/binding.node
+ → /Users/nrajlich/ref/Debug/binding.node
+ → /Users/nrajlich/ref/out/Release/binding.node
+ → /Users/nrajlich/ref/Release/binding.node
+ → /Users/nrajlich/ref/build/default/binding.node
+ → /Users/nrajlich/ref/compiled/0.8.2/darwin/x64/binding.node
+    at bindings (/Users/nrajlich/ref/node_modules/bindings/bindings.js:84:13)
+    at Object.<anonymous> (/Users/nrajlich/ref/lib/ref.js:5:47)
+    at Module._compile (module.js:449:26)
+    at Object.Module._extensions..js (module.js:467:10)
+    at Module.load (module.js:356:32)
+    at Function.Module._load (module.js:312:12)
+    ...
+```
+
+
+License
+-------
+
+(The MIT License)
+
+Copyright (c) 2012 Nathan Rajlich &lt;nathan@tootallnate.net&gt;
+
+Permission is hereby granted, free of charge, to any person obtaining
+a copy of this software and associated documentation files (the
+'Software'), to deal in the Software without restriction, including
+without limitation the rights to use, copy, modify, merge, publish,
+distribute, sublicense, and/or sell copies of the Software, and to
+permit persons to whom the Software is furnished to do so, subject to
+the following conditions:
+
+The above copyright notice and this permission notice shall be
+included in all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED 'AS IS', WITHOUT WARRANTY OF ANY KIND,
+EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF
+MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.
+IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY
+CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT,
+TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE
+SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 ================================================================================
 bl@1.2.2
 - repository: https://github.com/rvagg/bl
@@ -3467,6 +3641,32 @@ BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN
 ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN
 CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
+================================================================================
+ffi@2.3.0
+- repository: https://github.com/node-ffi/node-ffi
+- copyright:  Copyright (c) 2009-2011 Richard "Rick" W. Branson. Copyright (c) 2012-2014 Nathan Rajlich, Richard "Rick" W. Branson. Copyright (c) 2015 Nathan Rajlich, Richard "Rick" W. Branson, Gabor Mezo
+--------------------------------------------------------------------------------
+Copyright (c) 2009-2011 Richard "Rick" W. Branson
+Copyright (c) 2012-2014 Nathan Rajlich, Richard "Rick" W. Branson
+Copyright (c) 2015 Nathan Rajlich, Richard "Rick" W. Branson, Gabor Mezo
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to
+deal in the Software without restriction, including without limitation the
+rights to use, copy, modify, merge, publish, distribute, sublicense, and/or
+sell copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in
+all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
+FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS
+IN THE SOFTWARE.
 ================================================================================
 file-type@3.9.0
 - repository: https://github.com/sindresorhus/file-type
@@ -6321,6 +6521,24 @@ COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER
 IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN
 CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 ================================================================================
+nan@2.14.0
+- repository: https://github.com/nodejs/nan
+- copyright:  Copyright (c) 2018 NAN contributors. -----------------------------------
+--------------------------------------------------------------------------------
+The MIT License (MIT)
+=====================
+
+Copyright (c) 2018 NAN contributors
+-----------------------------------
+
+*NAN contributors listed at <https://github.com/nodejs/nan#contributors>*
+
+Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+================================================================================
 nanomatch@1.2.13
 - repository: https://github.com/micromatch/nanomatch
 - copyright:  Copyright (c) 2016-2018, Jon Schlinkert.
@@ -7572,6 +7790,292 @@ ANY SPECIAL, DIRECT, INDIRECT, OR CONSEQUENTIAL DAMAGES OR ANY DAMAGES
 WHATSOEVER RESULTING FROM LOSS OF USE, DATA OR PROFITS, WHETHER IN AN
 ACTION OF CONTRACT, NEGLIGENCE OR OTHER TORTIOUS ACTION, ARISING OUT OF OR
 IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.
+================================================================================
+ref-struct@1.1.0
+- repository: https://github.com/TooTallNate/ref-struct
+- copyright:  Copyright (c) 2012 Nathan Rajlich &lt;nathan@tootallnate.net&gt;
+--------------------------------------------------------------------------------
+ref-struct
+==========
+### Create ABI-compliant "[struct][]" instances on top of Buffers
+[![Build Status](https://secure.travis-ci.org/TooTallNate/ref-struct.svg)](https://travis-ci.org/TooTallNate/ref-struct)
+[![Build Status](https://ci.appveyor.com/api/projects/status/6v4h5v5kh9kmtke8?svg=true)](https://ci.appveyor.com/project/TooTallNate/ref-struct)
+
+
+This module offers a "struct" implementation on top of Node.js Buffers
+using the ref "type" interface.
+
+Installation
+------------
+
+Install with `npm`:
+
+``` bash
+$ npm install ref-struct
+```
+
+
+Examples
+--------
+
+Say you wanted to emulate the `timeval` struct from the stdlib:
+
+``` c
+struct timeval {
+  time_t       tv_sec;   /* seconds since Jan. 1, 1970 */
+  suseconds_t  tv_usec;  /* and microseconds */
+};
+```
+
+``` js
+var ref = require('ref')
+var StructType = require('ref-struct')
+
+// define the time types
+var time_t = ref.types.long
+var suseconds_t = ref.types.long
+
+// define the "timeval" struct type
+var timeval = StructType({
+  tv_sec: time_t,
+  tv_usec: suseconds_t
+})
+
+// now we can create instances of it
+var tv = new timeval
+```
+
+#### With `node-ffi`
+
+This gets very powerful when combined with `node-ffi` to invoke C functions:
+
+``` js
+var ffi = require('ffi')
+
+var tv = new timeval
+gettimeofday(tv.ref(), null)
+```
+
+#### Progressive API
+
+You can build up a Struct "type" incrementally (useful when interacting with a
+parser) using the `defineProperty()` function. But as soon as you _create_ an
+instance of the struct type, then the struct type is finalized, and no more
+properties may be added to it.
+
+``` js
+var ref = require('ref')
+var StructType = require('ref-struct')
+
+var MyStruct = StructType()
+MyStruct.defineProperty('width', ref.types.int)
+MyStruct.defineProperty('height', ref.types.int)
+
+var i = new MyStruct({ width: 5, height: 10 })
+
+MyStruct.defineProperty('weight', ref.types.int)
+// AssertionError: an instance of this Struct type has already been created, cannot add new "fields" anymore
+//      at Function.defineProperty (/Users/nrajlich/ref-struct/lib/struct.js:180:3)
+```
+
+
+License
+-------
+
+(The MIT License)
+
+Copyright (c) 2012 Nathan Rajlich &lt;nathan@tootallnate.net&gt;
+
+Permission is hereby granted, free of charge, to any person obtaining
+a copy of this software and associated documentation files (the
+'Software'), to deal in the Software without restriction, including
+without limitation the rights to use, copy, modify, merge, publish,
+distribute, sublicense, and/or sell copies of the Software, and to
+permit persons to whom the Software is furnished to do so, subject to
+the following conditions:
+
+The above copyright notice and this permission notice shall be
+included in all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED 'AS IS', WITHOUT WARRANTY OF ANY KIND,
+EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF
+MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.
+IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY
+CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT,
+TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE
+SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+
+[struct]: http://wikipedia.org/wiki/Struct_(C_programming_language)
+================================================================================
+ref@1.3.5
+- repository: https://github.com/TooTallNate/ref
+- copyright:  Copyright (c) 2012 Nathan Rajlich &lt;nathan@tootallnate.net&gt;
+--------------------------------------------------------------------------------
+ref
+===
+### Turn Buffer instances into "pointers"
+[![Build Status](https://secure.travis-ci.org/TooTallNate/ref.svg)](https://travis-ci.org/TooTallNate/ref)
+[![Build Status](https://ci.appveyor.com/api/projects/status/n8mswogp2im4uot8?svg=true)](https://ci.appveyor.com/project/TooTallNate/ref)
+
+
+This module is inspired by the old `Pointer` class from node-ffi, but with the
+intent of using Node's fast `Buffer` instances instead of a slow C++ `Pointer`
+class. These two concepts were previously very similar, but now this module
+brings over the functionality that Pointers had and Buffers are missing, so
+now Buffers are a lot more powerful.
+
+### Features:
+
+ * Get the memory address of any `Buffer` instance
+ * Read/write references to JavaScript Objects into `Buffer` instances
+ * Read/write `Buffer` instances' memory addresses to other `Buffer` instances
+ * Read/write `int64_t` and `uint64_t` data values (Numbers or Strings)
+ * A "type" convention, so that you can specify a buffer as an `int *`,
+   and reference/dereference at will.
+ * Offers a buffer instance representing the `NULL` pointer
+
+
+Installation
+------------
+
+Install with `npm`:
+
+``` bash
+$ npm install ref
+```
+
+
+Examples
+--------
+
+#### referencing and derefencing
+
+``` js
+var ref = require('ref')
+
+// so we can all agree that a buffer with the int value written
+// to it could be represented as an "int *"
+var buf = new Buffer(4)
+buf.writeInt32LE(12345, 0)
+
+// first, what is the memory address of the buffer?
+console.log(buf.address())  // ← 140362165284824
+
+// using `ref`, you can set the "type", and gain magic abilities!
+buf.type = ref.types.int
+
+// now we can dereference to get the "meaningful" value
+console.log(buf.deref())  // ← 12345
+
+
+// you can also get references to the original buffer if you need it.
+// this buffer could be thought of as an "int **"
+var one = buf.ref()
+
+// and you can dereference all the way back down to an int
+console.log(one.deref().deref())  // ← 12345
+```
+
+See the [full API Docs][docs] for more examples.
+
+
+The "type" interface
+--------------------
+
+You can easily define your own "type" objects at attach to `Buffer` instances.
+It just needs to be a regular JavaScript Object that contains the following
+properties:
+
+| **Name**      | **Data Type**                    | **Description**
+|:--------------|:---------------------------------|:----------------------------------
+| `size`        | Number                           | The size in bytes required to hold this type.
+| `indirection` | Number                           | The current level of indirection of the buffer. Usually this would be _1_, and gets incremented on Buffers from `ref()` calls. A value of less than or equal to _0_ is invalid.
+| `get`         | Function (buffer, offset)        | The function to invoke when dereferencing this type when the indirection level is _1_.
+| `set`         | Function (buffer, offset, value) | The function to invoke when setting a value to a buffer instance.
+| `name`        | String                           | _(optional)_ The name to use during debugging for this type.
+| `alignment`   | Number                           | _(optional)_ The alignment of this type when placed in a struct. Defaults to the type's `size`.
+
+Be sure to check out the Wiki page of ["Known
+Types"](https://github.com/TooTallNate/ref/wiki/Known-%22types%22), for the list
+of built-in ref types, as well as known external type implementations.
+
+For example, you could define a "bigint" type that dereferences into a
+[`bigint`](https://github.com/substack/node-bigint) instance:
+
+``` js
+var ref = require('ref')
+var bigint = require('bigint')
+
+// define the "type" instance according to the spec
+var BigintType = {
+    size: ref.sizeof.int64
+  , indirection: 1
+  , get: function (buffer, offset) {
+      // return a bigint instance from the buffer
+      return bigint.fromBuffer(buffer)
+    }
+  , set: function (buffer, offset, value) {
+      // 'value' would be a bigint instance
+      var val = value.toString()
+      return ref.writeInt64(buffer, offset || 0, val)
+    }
+}
+
+// now we can create instances of the type from existing buffers.
+// "buf" is some Buffer instance returned from some external data
+// source, which should contain "bigint" binary data.
+buf.type = BigintType
+
+// and now you can create "bigint" instances using this generic "types" API
+var val = buf.deref()
+            .add('1234')
+            .sqrt()
+            .shiftLeft(5)
+```
+
+Build the docs
+--------------
+
+Install the dev dependencies:
+
+``` bash
+$ npm install
+```
+
+Generate the docs:
+
+``` bash
+$ npm run docs
+```
+
+
+License
+-------
+
+(The MIT License)
+
+Copyright (c) 2012 Nathan Rajlich &lt;nathan@tootallnate.net&gt;
+
+Permission is hereby granted, free of charge, to any person obtaining
+a copy of this software and associated documentation files (the
+'Software'), to deal in the Software without restriction, including
+without limitation the rights to use, copy, modify, merge, publish,
+distribute, sublicense, and/or sell copies of the Software, and to
+permit persons to whom the Software is furnished to do so, subject to
+the following conditions:
+
+The above copyright notice and this permission notice shall be
+included in all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED 'AS IS', WITHOUT WARRANTY OF ANY KIND,
+EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF
+MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.
+IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY
+CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT,
+TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE
+SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+
+[docs]: http://tootallnate.github.com/ref
 ================================================================================
 regex-not@1.0.2
 - repository: https://github.com/jonschlinkert/regex-not
